@@ -1,0 +1,55 @@
+.footer{
+    padding: 9.6rem 3.2rem;
+    border-top: 1px solid #ddd;
+    background-color: #212121; 
+    margin-top: 4.8rem;     
+    
+}
+
+.footer-items{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    gap: 2.4rem;
+}
+.footer-heading{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+.address, .footer-link, .copyright{
+    font-size: 1.6rem;
+    color: #ffffff;
+    opacity: 0.5;
+}
+.contacts{
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+.address{
+    margin-bottom: 2.4rem;
+}
+.copyright{
+    margin-top: auto;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+.footer-logo-col{
+    display: flex;
+    flex-direction: column;
+}
+.footer-logo{
+    color: #ffffff;
+    font-size: 4.8rem;
+}
