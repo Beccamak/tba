@@ -21,9 +21,8 @@ const ProductPage = ({product}) => {
     }    
     if (product === null) return;
 
-    const {imgUrl , name, price, percentageDecrease, brandDetails: {brandName}} = product;
-    const {productDetails: {stars, rating, colors, description : {description, features},specifications, delivery}} = product;
-    const details = [
+    const {imgUrl , name, price,  brand, stars, rating, colors, description, features,specifications, delivery } = product;
+       const details = [
         {"product features": features},
         {"product specifications" : specifications},
         {"delivery & returns" : delivery}
@@ -45,7 +44,7 @@ const ProductPage = ({product}) => {
            </div>
            <div className='product-info'>
                <h2 className='product-info-name'>{name}</h2>
-               <p className='brand-name'>Brand: {brandName}</p>
+               <p className='brand-name'>Brand: {brand}</p>
                <p className='sku'>SKU: SKKER-345-TRE</p>
                <div className='ratings'>
                <div >

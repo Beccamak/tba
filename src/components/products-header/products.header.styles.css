@@ -9,7 +9,8 @@
     
 }
 .normal, .noLinkHeader, .previewHeader{
-    background-color: #F5B216;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .flash_sale_product_header{

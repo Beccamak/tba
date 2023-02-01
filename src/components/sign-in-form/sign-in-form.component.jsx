@@ -7,6 +7,7 @@ import { userSignInUpFailed, userSignInUpStart, userSignInUpSuccess } from '../.
 import { selectActionIsLoading } from '../../store/userReducer/user.selector';
 import Spinner from '../spinner/spinner.component';
 import { useNavigate } from 'react-router-dom';
+import { Axios } from 'axios';
 
 const defaultFormFields = {
     email: "",
@@ -32,23 +33,16 @@ const SignInForm = () =>{
     }
     const signInWithGoogle = async (event) => {
         event.preventDefault();
-        dispatch(userSignInUpStart());
-        try {
-            const {user} = await signInWithGooglePopup();
-            await createUserDocumentFromAuth(user);
-            dispatch(userSignInUpSuccess(user));
-            onSuccessfulSignIn();
-            // resetFormFields();
-        } catch (error) {
-            dispatch(userSignInUpFailed(error));
-            console.log(error.message);
-        }
+       
     }
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
-           const {user} = await signInAuthUserWithEmailAndPassword(email, password);
+           const {user} = await Axios.post("localhost:5000/auth/login",{
+            email: email,
+            password: password
+           } );
            dispatch(userSignInUpSuccess(user)); 
            resetFormFields();
            onSuccessfulSignIn();

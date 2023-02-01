@@ -10,18 +10,17 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const ProductCard = ({product}) => {
     const [link, setLink] = useState("");
-    const {imgUrl , name, price} = product;
-    const {flashSales} = product.additionalDetails;
-    const {percentageDecrease} = product.additionalDetails;
+    const {imgUrl , name, price, flashSale, discount} = product;
     const dispatch = useDispatch();  
     const cartItems = useSelector(selectCartItems);          
     const {setCurrentProduct} = useContext(DisplayDetails);
+    
     
 
    const onProductClickHandler = () => {
        setLink("product")
        setCurrentProduct(product);
-       console.log(link);
+       
    }
    const addItemHandler = () => {
        dispatch(addItemToCart(cartItems, product));
@@ -29,14 +28,14 @@ const ProductCard = ({product}) => {
    }
    const onMouseEnterHandler = () => {
        setLink("")
-       console.log(link);
+     
    }
   
     return(
         <Link to={`/${link}`}>
         { <div className="product-card-container" onMouseEnter={onProductClickHandler}>
-        {flashSales && <div className='percent-decrease'>
-             <span className='percentage'>-{percentageDecrease}%</span>
+        {flashSale && <div className='percent-decrease'>
+             <span className='percentage'>-{discount}%</span>
          </div>}
              <div className='img-container'>
              <img className="product-image" src={imgUrl} alt={name} />      

@@ -6,12 +6,16 @@ const ProductsCard = ({children,
     headerType,
     route,
     products}) => {
-        const min = 400000
-        const max = 500000
+    //   console.log(products.data.products);
     return(
         <div className='sales-section'>
         <ProductsHeader children={children} headerType={headerType} route={route}/>
         <div className='sales-products'>
+        {
+            products.map((product) => {
+                return <ProductCard key={product.id} product={product}/>
+                })
+            }
         </div>
         
         </div>
@@ -26,10 +30,5 @@ export default ProductsCard;
 
 
 
-// {
-//     products.map((product) => {
-//         return <ProductCard key={product.id} product={product}/>
-//         })
-//     }
 
 
