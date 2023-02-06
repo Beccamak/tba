@@ -5,7 +5,8 @@ export const selectProductReducer = (state) => state.products;
 
 export const selectProducts = createSelector(
   [selectProductReducer],
-  (productsReducerSlice) => productsReducerSlice.products.data.products
+  // (productsReducerSlice) => productsReducerSlice.products.data.products
+  (productsReducerSlice) => productsReducerSlice.products
 );
 export const selectIsDropdownOpen = createSelector(
   [selectProductReducer],
@@ -16,7 +17,7 @@ export const selectFlashSalesProducts = createSelector(
   [selectProducts],
   (products) =>
     products.filter((product) => {
-      return product.additionalDetails.flashSales === true;
+      return product.flashSale === true;
     })
 );
 

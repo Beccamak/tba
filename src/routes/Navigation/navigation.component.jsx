@@ -42,9 +42,7 @@ const Navigation = () => {
         navigate("/all-products");
    }
  
-   const toggleIsCartOpen = () => {
-       dispatch(setIsCartOpen(!isCartOpen));
-   }
+
    const toggleIsAccountOpen = () => {
        dispatch(setIsAccountOpen(!isAccountOpen));
    }
@@ -52,15 +50,14 @@ const Navigation = () => {
        dispatch(setIsDropdownOpen(!isDropdownOpen));
    }
    useEffect(()=> {
-    if(isCartOpen || isAccountOpen || isDropdownOpen){
+    if( isAccountOpen || isDropdownOpen){
         document.body.style.overflowY = 'hidden'
     }else{
         document.body.style.overflowY = 'scroll'
     }
-   }, [isCartOpen, isAccountOpen, isDropdownOpen])
+   }, [isAccountOpen, isDropdownOpen])
 
-   useEffect(()=>{
-        const handleScroll = () =>{
+   useEffect(()=>{        const handleScroll = () =>{
             setSticky(window.scrollY>200) 
         }
         window.addEventListener('scroll', handleScroll);
@@ -76,21 +73,29 @@ const Navigation = () => {
             <Link  to="/">
             {/*<img className='logo' src={Logo} alt="Total beauty affairs"/>*/}
             </Link>
-            <div className='mid-nav-links'>
-            <Link to="/" className='nav-link'>Home</Link>
-            <Link to = "/about-us" className='nav-link'>About us</Link>
-            <Link to="/contact-us" className='nav-link'>Contact us</Link>
+            <div className='search-container'>
+               
+
+            <input className='input-search' type="text" placeholder='Search products, categories and brands' value={searchString} onChange={onSearchChangeHandler}/>
+            <svg xmlns="http://www.w3.org/2000/svg" className="search-icon nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+                <div className='search-text'>
+                <Button buttonType="filled" children="search" onClickHandler={onSearchClickHandler} />
+                    
+                </div>
             </div>
+          
             <div className='nav-links'>
             
-            <span className='nav-link' onClick={toggleIsDropdownOpen} to="/">
+            {/*<span className='nav-link' onClick={toggleIsDropdownOpen} to="/">
                 <div className='nav-link-details'>
                     <svg xmlns="http://www.w3.org/2000/svg" className="nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                     <span>Products</span>
-            </div>
-            </span> 
+    </div>
+    </span> */}
             <Link className='nav-link'  to="/">
                 <div className='nav-link-details'>
                     <svg xmlns="http://www.w3.org/2000/svg" className="nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -99,7 +104,7 @@ const Navigation = () => {
                     <span>Services</span>
             </div>
             </Link> 
-            <span className='nav-link cart' onClick={toggleIsCartOpen}>
+            <Link className='nav-link cart' to="/cart">
                 <div className='nav-link-details'>
                 <div className="cart-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" className="nav-icon " fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -111,8 +116,8 @@ const Navigation = () => {
                 
                
                 </div>
-            </span> 
-            <Link className='nav-link' to="/">
+            </Link> 
+            <Link className='nav-link' to="/sign-up">
                 <div className='nav-link-details'>
                 <svg xmlns="http://www.w3.org/2000/svg" className="nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -122,7 +127,7 @@ const Navigation = () => {
             </Link>
             {
                 currentUser ?
-                <Link className='nav-link' onClick={toggleIsAccountOpen} to="/">
+                <Link className='nav-link'  to="/account">
                  <div  className='nav-link-details'>
                  <span className='home-name'>My Account</span>
                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="bar-icon w-6 h-6">
@@ -131,7 +136,7 @@ const Navigation = () => {
                  </div>
                  </Link> 
                 : 
-                <Link className='nav-link' to="/auth">
+                <Link className='nav-link' to="/sign-in">
                 <div className='nav-link-details'>
                     <svg xmlns="http://www.w3.org/2000/svg" className="nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
@@ -144,12 +149,11 @@ const Navigation = () => {
             </div>
         </div>
        
-        {(hasTransitionedIn || isCartOpen) && <CartDropdown /> }
-        {(accountHasTransitionedIn || isAccountOpen) && <AccountDropdown name={currentUser.displayName} email={currentUser.email}/> }
-        {(dropDownHasTransitionedIn || isDropdownOpen) && <Dropdown/> }
+        
+       
         
         </div>
-        <div className="">
+        <div>
         <Outlet />
 
         </div>

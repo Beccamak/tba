@@ -19,7 +19,7 @@ const ShortDeals = ({children, headerType, route, products}) => {
     }
     return(
         <div className='deals-section'>
-        <ProductsHeader children={children} headerType={headerType} route={route}/>
+       
         <div  ref={productContainerRef} className='deals-products'>
         {
             products.filter((_, index) => {

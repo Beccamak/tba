@@ -25,6 +25,10 @@ import AllProducts from "./routes/all products/all.products.component";
 import { addCollectionAndDocuments } from "./utils/firebase";
 import CATEGORIES from "./categories";
 import { fetchProductsOnAppLoad } from "./store/products reducer/products.action";
+import CartDropdown from "./components/cart dropdown/cart.dropdown.component";
+import AccountDropdown from "./components/account dropdown/account.dropdown.component";
+import SignUp from "./routes/sign up/sign.up.route";
+import SignIn from "./routes/sign in/sign.in.route";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -51,7 +55,8 @@ const App = () => {
         <Routes location={location} >
           <Route path="/" element={<Navigation />}>
             <Route index element={<Home />} />
-            <Route path="/auth" element={<Authentication />} />
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/sign-up" element={<SignUp />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/all-products" element={<AllProducts />} />
             <Route path="/flash" element={<FlashsalesCategory />} />
@@ -64,6 +69,8 @@ const App = () => {
               />
             )}
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/cart" element={<CartDropdown/>} />
+            <Route path="/account" element={<AccountDropdown/>} />
             </Route>
         </Routes>
       </AnimatePresence>

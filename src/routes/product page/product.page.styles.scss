@@ -1,6 +1,8 @@
+
 .product-page {
   display: flex;
   gap: 1.2rem;
+  margin-bottom: 16rem;
 }
 
 .product-page-container {
@@ -180,4 +182,30 @@
 .description{
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
+}
+.product-down{
+  background-color: #FFFFFF;
+  padding: 1.4rem 3.2rem;
+
+
+.down-details{
+  display: flex;
+  margin-bottom: 3.6rem;
+
+  gap: 3.2rem;
+ 
+}
+.down-details p{
+
+
+}
+.despn{
+  color: #F5B216;
+  border-bottom: 2px solid #F5B216;
+}
+.down-details p:hover{
+  font-weight: 700;
+  color: #F5B216;
+  
+}
 }

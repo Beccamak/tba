@@ -1,6 +1,7 @@
 import { PRODUCTS_ACTION_TYPES } from "./products.types";
 
 
+
 const PRODUCTS_INITIAL_STATE = {
     currentCategory: null,
     currentProduct: null,

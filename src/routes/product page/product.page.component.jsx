@@ -36,8 +36,10 @@ const ProductPage = ({product}) => {
     }
 
     return(
-       <div className='product-page'>
-       <div className="product-page-container">
+        <div className='container'>
+        
+        <div className='product-page'>
+        <div className="product-page-container">
            <div className='ppg-img-con'>
            <img className="product-img" src={imgUrl} alt={name} /> 
                 
@@ -99,6 +101,19 @@ const ProductPage = ({product}) => {
       </div>
 
     
+       </div>
+       <div className='product-down'>
+       <div className='down-details'>
+       <p className='despn'>Description</p>
+       <p>Delivery & Returns</p>
+       <p>Reviews</p>
+       </div>
+       <div className=''>
+       <p>LoremIpsum sunt excepteur magna eu labore. Sunt aliqua fugiat eu reprehenderit deserunt. Et aute do Lorem commodo enim minim. Enim non duis fugiat duis esse enim adipisicing. Ex aliquip deserunt duis tempor velit nulla reprehenderit. Labore et mollit nulla anim incididunt ad deserunt esse deserunt.</p>
+       </div>
+       <div className='returns'></div>
+       <div className='reviews'></div>
+       </div>
        </div>
 
         )

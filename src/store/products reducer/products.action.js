@@ -1,6 +1,7 @@
 import { createAction } from "../../utils/reducer.utils";
 import Axios from 'axios';
 import { PRODUCTS_ACTION_TYPES } from "./products.types";
+import products from "../../THE_PRODUCTS";
 
 
 export const fetchProductsStart = () => {
@@ -28,11 +29,12 @@ export const setIsDropdownOpen = (bool) => {
 
 export const fetchProductsOnAppLoad = () =>async (dispatch)=> {
     dispatch(fetchProductsStart());
-    try {
-        const products  = await Axios.get("http://localhost:5000/products/getAllProducts");
-        console.log(products);
-        dispatch(fetchProductsSuccess(products));
-    } catch (error) {
-        dispatch(fetchProductsFailed(error));
-    }
+    dispatch(fetchProductsSuccess(products));
+//     try {
+//         const products  = await Axios.get("http://localhost:5000/products/getAllProducts");
+//         console.log(products);
+//         dispatch(fetchProductsSuccess(products));
+//     } catch (error) {
+//         dispatch(fetchProductsFailed(error));
+//     }
 }

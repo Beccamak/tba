@@ -12,7 +12,10 @@ const Home = () => {
   
     return(
          <motion.div initial={{width: 0}} animate={{width: "100%"}} transition={{duration: 0.9}} exit={{width: window.innerWidth}}>    
-         <Header />
+         <MainDisplay />
+         <FlashSales />
+         <FlashSales />
+         <TopCategories />
          
            </motion.div>
            )
@@ -20,10 +23,9 @@ const Home = () => {
         
         
         export default Home;
-          
+        
+        // <Header />
           // <OutstandingSales />
 // <FlashSales />
-        // <FlashSales />
-        //  <TopCategories />
         //   <TopBrands />
         //   <Arrivals />

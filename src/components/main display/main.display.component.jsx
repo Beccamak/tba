@@ -9,7 +9,7 @@ const MainDisplay = () => {
         const {flyout} = useContext(DisplayDetails);
        
     return(
-         <div className='display-cards'>  
+         <div className='display-cards container'>  
            <Flyout />
            {!flyout? <Slider sliderType="big"/> :<Slider sliderType="small"/>}
            </div>

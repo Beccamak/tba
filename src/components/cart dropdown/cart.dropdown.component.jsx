@@ -4,8 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { selectCartCount, selectCartItems } from '../../store/cart reducer/cart.selector';
 import { useSelector } from 'react-redux';
 import CartItem from '../cart-item/cart.item.component';
-import { selectIsCartOpen } from '../../store/cart reducer/cart.selector';
-import useMountAndUnmountTransition from '../transition hook/use.transition.component';
+import FlashSales from '../flash sales/flash.sales.component';
 
 
 
@@ -15,19 +14,32 @@ const CartDropdown = () => {
    const cartItems = useSelector(selectCartItems);
    const cartCount = useSelector(selectCartCount);
    const checkoutHandler = () => navigate("/checkout");
-   const isCartOpen =  useSelector(selectIsCartOpen);
-   const hasTransitionedIn = useMountAndUnmountTransition(isCartOpen, 1000);   
+   const onShopNowHandler = () => navigate("/");
+ 
     return(
-        <div className={`cart-dropdown ${hasTransitionedIn && 'cart-in'} ${isCartOpen && 'cart-visible'}`}>
+        <div classNamme='cart-dropdown'>
         {
             cartItems.map((item) => <CartItem cartItem={item}/>)
         }
-        {cartCount ? <div className='checkout-con'><Button  children="GO TO CHECKOUT" onClickHandler={checkoutHandler}/></div> : <p className='cart-empty'>Cart is Empty</p>}
+        {cartCount ? <div className='checkout-con'><Button  children="GO TO CHECKOUT" onClickHandler={checkoutHandler}/></div> :
+         <div className='cart-empty'>
+         <svg xmlns="http://www.w3.org/2000/svg" className="cart-empty-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+         <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+
+         </svg>
+        <p className='cart-text'>Your cart is empty!</p>
+        <p className='cart-sub-text'>You have not added any item to your cart</p>
+        <Button children="Shop Now" onClickHandler={onShopNowHandler} />
+        </div>}
+
+        <FlashSales />
         </div>
 
         )
-        {(hasTransitionedIn || isCartOpen) && <CartDropdown /> }
+       
 }
 
 
 export default CartDropdown;
+
+

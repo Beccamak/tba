@@ -6,8 +6,8 @@ import Dropdown from "../../components/dropdown/dropdown.component";
 const Authentication = () => {
     return(
         <motion.div className="authentication-container" initial={{width: 0}} animate={{width: "100%"}} transition={{duration: 0.9}} exit={{width: window.innerWidth}}>    
-        <SignUpForm />
         <SignInForm />
+        
         {/*<button className="button">search</button>*/}
         </motion.div>
     )

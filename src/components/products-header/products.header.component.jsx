@@ -13,7 +13,7 @@ const ProductsHeader = ({headerType, children, route, onClickHandler, previewRou
 
     // const {title, additionalInfo} = productTitle;
     return(
-        <div className= {`products-header-container ${PRODUCT_HEADER_CLASSES[headerType]}`}>
+        <div className= {`products-header-container`}>
             <span>{children}</span>
             {headerType !=="noLinkHeader" && headerType !=="previewHeader" && <Link to={`/${route}`} onClick={onClickHandler}>View all</Link>}
             {headerType === "previewHeader" && <Link to={previewRoute}>View All</Link>}

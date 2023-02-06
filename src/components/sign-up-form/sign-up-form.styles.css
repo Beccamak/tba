@@ -1,6 +1,7 @@
 .sign-up-container{
     background-color: #ffffff;
-    width: 35%;
+    max-width: 60rem;
+    margin: 0 auto;
 
 }
 .sign-up-title{

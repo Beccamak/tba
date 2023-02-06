@@ -4,16 +4,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.4rem 1.6rem;
+    padding: 2.4rem 4.8rem;
     margin-bottom: 2.8rem;
+    border-bottom: 1px solid #EDEDEB;
+    color: #000000;
     
-}
-.normal, .noLinkHeader, .previewHeader{
-    background-color: #000000;
-    color: #ffffff;
-}
-
-.flash_sale_product_header{
-    background-color: #ff1100;
-    color: #efefef;
+    
 }

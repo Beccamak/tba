@@ -9,7 +9,7 @@ import { selectCurrentCategory, selectCurrentCategoryProducts, selectProducts} f
 const Shop = () => {
     const currentCategory = useSelector(selectCurrentCategory);
     const products = useSelector(selectProducts);
-    console.log("pr", products);
+    
     return(
         <Routes>
         <Route index element={<ProductsPage  productsDetails={{
