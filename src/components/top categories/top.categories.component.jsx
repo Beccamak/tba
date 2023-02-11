@@ -14,6 +14,7 @@ const TopCategories = () => {
    const onLeaveTopCategory = () => setShowTopCategory(false);
     return(
         <div className='top-categories'>
+        <ProductsHeader children="Top Categories" />
 
         <div className='top-categories-container'>
             <div className='top-category' onMouseEnter={onEnterTopCategory} onMouseLeave={onLeaveTopCategory}>

@@ -1,78 +1,83 @@
 
-.Button{
+.fill{
     line-height: normal;
     background: none;
-    text-transform: uppercase;
+    background-color: #F5B216;
     border: none;
     padding: 1.2rem 2rem;
-    min-width: 120px;
+    min-width: 12rem;
     /* width: 100%; */
+    text-transform:uppercase;
     cursor: pointer;
-    transition: color .45s cubic-bezier(.785,.135,.15,.86),border .45s cubic-bezier(.785,.135,.15,.86);
-    position: relative;
-    /* color: #ffffff; */
-
+    
     text-align: center;
     letter-spacing: .2rem;
-    font-family: Montserrat, sans-serif;;
     font-weight: 400;
     font-style: normal;
     line-height: normal;
     border-radius: 6px;
-    z-index: 5;
-    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    /* transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); */
+    transition: color .45s linear, background-color .45s linear;
+    /* box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); */
     
 
 }
 
-.Button:hover{
-    color: #333;
-    border: 1px solid #333;
-
-   
-
+.fill:hover{
+    font-weight: 700;
+    font-size: 1.4rem;
+    
 }
-.Button::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #F5B216;
+.outline{
+    background: none;
+    border: 1px solid #F5B216;
+    color: #F5B216;
+    line-height: normal;
+    padding: 1.2rem 2rem;
+    min-width: 12rem;
+    /* width: 100%; */
+    text-transform:uppercase;
+    cursor: pointer;
+    
+    text-align: center;
+    letter-spacing: .2rem;
+    font-weight: 400;
+    font-style: normal;
     border-radius: 6px;
-    transform: scale(1);
-    transform-origin: left center;
-    z-index: -1;
-    transition: transform .45s cubic-bezier(.785,.135,.15,.86);
+    /* transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); */
+    transition: color .45s linear, background-color .45s linear;
 }
-.button::before{
-    transition: transform .45s cubic-bezier(.785,.135,.15,.86);
+.outline:hover{
+    background-color: #F5B216;
+    color: #131415;
+    border: none;
+
 }
-.button:hover::before{
-        transform: scaleX(0);
-        
+
+.footer-btn{
+    line-height: normal;
+    background: none;
+    background-color: #F5B216;
+    border: none;
+    padding: 1.2rem 2rem;
+    min-width: 12rem;
+    /* width: 100%; */
+    text-transform:uppercase;
+    cursor: pointer;
     
-}
-.Button:hover::before{
-    transform-origin: right center;
-    transform: scaleX(0);
-    transition: transform .45s cubic-bezier(.785,.135,.15,.86);
-
-}
-.Button::before{
-    transition: transform .45s cubic-bezier(.785,.135,.15,.86);
-}
-
-.fillCard:hover{
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    text-align: center;
+    letter-spacing: .2rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+        /* transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); */
+        transition: color .45s linear, background-color .45s linear;
 }
 
-@media (max-width: 70em){
-    .fill{
-       font-size: 10px;
-       
-       
-    }
+.footer-btn:hover{
+       font-weight: 700;
+    
+    
 }

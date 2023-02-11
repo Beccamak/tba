@@ -1,16 +1,46 @@
 import './footer.component.styles.css';
 import {Link} from 'react-router-dom';
+import Button from '../../components/button/button.component';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagramSquare,  faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
+
+
 
 
 const Footer = () => {
     return (
+        <div>
+        <div className='footer-up'>
+        <div>
+        <span className='total'>TOTAL</span>
+        <span className='beauty'>BEAUTY</span>
+        <span className='affairs'>AFFAIRS</span>
+        </div>
+        <div>
+        <p className='updates'>Get new updates</p>
+        <p className='subscribe'>Subscribe to our newsletter to get updates on our latest offers!</p>
+        </div>
+        <div  className='sub-con'>
+        <input  classNAme="eml" type="email" placeholder="Enter your email address" required />
+        <Button children="Subscribe" buttonType="footer" />
+        </div>
+        </div>
+
         <div className='footer'>
+
             <div className='footer-items'>
                 <div  className='footer-logo-col'>
-                    <div>
-                    <Link className='footer-logo' to='/'>Logo</Link>
+                    <div className=''>
+                    <p className='connect'>Connect With us</p>
+                    <div className='footer-icons'>
+                    <FontAwesomeIcon className='facebook' icon={faFacebook} size="2x" />
+                    <FontAwesomeIcon className='insta' icon={faInstagramSquare} size="2x"  />
+                    <FontAwesomeIcon className='twitter' icon={faTwitter}  size="2x" />
+                    <FontAwesomeIcon className='whatsapp' icon={faWhatsapp} size="2x"  />
                     </div>
-                    <p className='copyright'>Copyright &copy; 2023 by Rebecca, Inc. All rights reserved.</p>
+                    </div>
+                    <p className='copyright'>Copyright &copy; 2023 by CoralClouds, Inc. All rights reserved.</p>
                 </div>
                 <div>
                     <p className='footer-heading'>Contact us</p>
@@ -25,16 +55,15 @@ const Footer = () => {
                     
                 </div>
                 <div>
-                    <p className='footer-heading'>Account</p>
+                    <p className='footer-heading'>About TBA</p>
                         <ul className='footer-links'>
-                        <Link className='footer-link' to="/">Create an account</Link>
-                        <Link className='footer-link' to="/">Sign in</Link>
-                        <Link className='footer-link' to="/">iOS app</Link>
-                        <Link className='footer-link' to="/">Android app</Link>
+                        <Link className='footer-link' to="/about-us">About Us</Link>
+                        <Link className='footer-link' to="/contact-us">Contact Us</Link>
+                        <Link className='footer-link' to="/">Our Blog</Link>
                         </ul>
                 </div>
                 <div>
-                <p className='footer-heading'>Store</p>
+                <p className='footer-heading'>Members</p>
                         <ul className='footer-links'>
                         <Link className='footer-link' to="/">About Virtual Store</Link>
                         <Link className='footer-link' to="/">For Business</Link>
@@ -52,6 +81,7 @@ const Footer = () => {
                         </ul>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

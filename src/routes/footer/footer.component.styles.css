@@ -1,8 +1,7 @@
 .footer{
     padding: 9.6rem 3.2rem;
-    border-top: 1px solid #ddd;
-    background-color: #212121; 
-    margin-top: 4.8rem;     
+    background-color: #131415;
+    
     
 }
 
@@ -17,7 +16,7 @@
     font-size: 1.8rem;
     font-weight: 500;
     margin-bottom: 4rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     color: #ffffff;
     opacity: 0.7;
 }
@@ -31,6 +30,7 @@
     font-size: 1.6rem;
     color: #ffffff;
     opacity: 0.5;
+    transition: opacity linear .3s;
 }
 .contacts{
     font-style: normal;
@@ -50,6 +50,85 @@
     flex-direction: column;
 }
 .footer-logo{
+   width: 20rem;
+   /* height: 6.8rem; */
+}
+
+.footer-up{
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4rem 3.2rem;
+    background-color: #1E1E1E;
+    margin-top: 4.8rem;
+}
+
+.total, .beauty, .affairs{
+    font-size: 2.4rem;
     color: #ffffff;
-    font-size: 4.8rem;
+    font-family: pacifico, cursive;
+}
+.total{
+    color: #F5B216;
+}
+.affairs{
+    color: #F5B216;
+}
+.updates{
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2;
+    color: #ffffff;
+}
+.sub-con{
+    display: flex;
+    width: 40%;
+}
+.sub-con input[type="email"]{
+    padding: 1.4rem;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    outline: none;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+   
+}
+input[type="email"]::placeholder{
+    color: #131415;
+    opacity: 0.5;
+}
+.subscribe{
+    color: #ffffff;
+}
+.connect{
+    font-size: 1.8rem;
+    color: #ffffff;
+    opacity: 0.7;
+
+}
+.footer-icons{
+    display: flex;
+    color: #ffffff;
+    
+    gap: 2.4rem;
+    padding: 2.4rem 0;
+   
+}
+.facebook, .insta, .twitter, .whatsapp{
+    opacity: 0.7;
+    transition: opacity linear .3s;
+}
+.facebook:hover,
+.insta:hover,
+.whatsapp:hover,
+.twitter:hover{
+    cursor: pointer;
+    opacity: 1;
+    
+}
+
+.address:hover, .footer-link:hover{
+    font-weight: 700;
+    opacity: 1;
 }

@@ -45,7 +45,7 @@ const ProductCard = ({product}) => {
                  <p className="product-price">$ {price}</p>
              </div>
              <div className='card-add-to-cart' onMouseEnter={onMouseEnterHandler}>
-             <Button buttonType="filledCard" children="Add to Cart"   onClickHandler={addItemHandler} />
+            {/* <Button buttonType="filledCard" children="Add to Cart"   onClickHandler={addItemHandler} />*/}
              </div>
          </div>}
         </Link>

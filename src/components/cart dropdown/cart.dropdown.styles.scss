@@ -30,8 +30,10 @@
 
 
 }
-
-
+.cart-dropdown{
+    max-width: 130rem;
+    margin: 0 auto;
+}
 .cart-empty{
 
     display: flex;
@@ -59,5 +61,17 @@
     .cart-sub-text{
         margin-bottom: 2.4rem;
     }
+
+}
+.shopping-cart-con{
+    display: flex;
+    gap: 2.4rem;
+}
+.shopping-cart{
+    font-size: 2.4rem;
+}
+.cart-items{
+    background-color: #FFFFFF;
+    width: 60%;
 
 }

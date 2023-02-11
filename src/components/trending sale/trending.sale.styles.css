@@ -1,0 +1,14 @@
+.trending-section{
+    background-color: #FFF;
+    margin: 0 4.8rem 4.8rem 4.8rem;
+    transition: transform 1s, opacity 1s;
+    
+    
+  }
+  
+  .trending-products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(236px, auto));
+    gap: 1.6rem;
+    
+}

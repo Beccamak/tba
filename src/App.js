@@ -29,7 +29,8 @@ import CartDropdown from "./components/cart dropdown/cart.dropdown.component";
 import AccountDropdown from "./components/account dropdown/account.dropdown.component";
 import SignUp from "./routes/sign up/sign.up.route";
 import SignIn from "./routes/sign in/sign.in.route";
-
+import AboutUs from "./routes/about us/about-us.component.jsx";
+import ContactUs from "./routes/contact-us/contact-us.component";
 const App = () => {
   const dispatch = useDispatch();
   const { currentProduct } = useContext(DisplayDetails);
@@ -71,6 +72,8 @@ const App = () => {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/cart" element={<CartDropdown/>} />
             <Route path="/account" element={<AccountDropdown/>} />
+            <Route path="/about-us" element={<AboutUs/>} />
+            <Route path="/contact-us" element={<ContactUs/>} />
             </Route>
         </Routes>
       </AnimatePresence>

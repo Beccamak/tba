@@ -9,7 +9,7 @@
   .deals-products{
     position: relative;
     display: flex;
-    min-width: 18rem;
+    /* min-width: 18rem; */
      /* max-width: 250px;  */
     
      /* flex: 0 1 auto; */
@@ -20,6 +20,7 @@
     /* padding: 0 1.6rem 2rem 1.6rem; */
     overflow-x: scroll;
     /* background-color: red; */
+    /* margin: 1.2rem 2.4rem; */
     
 }
 
@@ -42,8 +43,9 @@
   /* border: 1px solid #21212149; */
   /* opacity: 0;  */
   transition: opacity 0.5s ease-in-out; 
-  background-color: #FFFFFF;
-  color: #F5B216;
+  background-color: #F5B216;
+  color: #FFFFFF;
+  z-index: 1000;
   /* position: fixed; */
 }
 .left{
@@ -146,24 +148,3 @@
     -moz-appearance: none;
     box-shadow: 0 0 6px rgba(0,0,0,0.05);
   } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
