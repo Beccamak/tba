@@ -1,10 +1,14 @@
 .mid-section{
     background-color: #FFFFFF;
+    margin: 6.4rem 0;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .mid-items{
     display: flex;
     padding: 1.2rem;
-    margin: 6.4rem 0;
     gap: 3.6rem;
     justify-content: center;
 
@@ -14,6 +18,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 4rem;
 }
 
 .mid-icon{
@@ -26,5 +31,6 @@
 
 .down{
     margin-top: 3.6rem;
-    color: #131415;
+    /* color: #131415; */
+    color: #F5B216;
 }

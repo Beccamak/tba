@@ -22,9 +22,17 @@
                 transition: opacity ease-in-out 0.4s;
                 // background-size: contain;
                 // width: 100%;
+                height: 100%;
                 
                 .banner-img{
                     position: relative;
+                    height: 100%;
+                    
+                    
+                    .slide-img{
+                    //    background-size:cover;
+                    size: cover;
+                                        }
 
                     .banner-txt{
                         position: absolute;
@@ -49,7 +57,7 @@
                 height: 2rem;
                 background-color: #fff;
                 border-radius: 50%;
-                border: 1px solid #21212149;
+                border: 1px solid #13141549;
                 opacity: 0; 
                 transition: opacity 0.5s ease-in-out;
             }

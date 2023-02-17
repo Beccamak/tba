@@ -1,38 +1,7 @@
-// import styled from "styled-components";
 
-// export const CartDropdownContainer = styled.div`
-//     background-color: #fff;
-//     height: 28rem;
-//     width: 4rem;
-// `;
-
-.cart-dropdown{
- 
-//         .cart-empty{
-
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         font-size: 2.8rem;
-//         letter-spacing: 0 .5rem;
-//         background-color: #FFFFFF;
-        
-//         .cart-empty-icon{
-//             font-size: 2.4rem;
-//             color: #F5B216;
-//         }
-// }
-
-
-// .checkout-con{
-// //    bottom: 0;
-// }
-
-
-}
 .cart-dropdown{
     max-width: 130rem;
-    margin: 0 auto;
+    margin: 0  auto;
 }
 .cart-empty{
 
@@ -66,12 +35,29 @@
 .shopping-cart-con{
     display: flex;
     gap: 2.4rem;
+    margin-bottom: 4.8rem;
 }
 .shopping-cart{
     font-size: 2.4rem;
 }
-.cart-items{
+.cart-table{
     background-color: #FFFFFF;
+    // background-color: red;
     width: 60%;
+    
+    
+
+}
+
+.cart-header{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+
+    gap: 4.8rem;
+    border-bottom:  1px solid #EFEDEB;
+    padding-bottom: 1.2rem;
+    padding: 2.4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
 
 }

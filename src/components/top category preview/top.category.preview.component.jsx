@@ -11,7 +11,7 @@ const TopCategoryPreview = ({topCategory}) => {
         <div  className='deals-section'>
        
         <div  className='category-preview'>
-        {topCategoriesProducts.filter((product)=> product.categoryDetails.MainCategory === topCategory).filter((_, index) => index < 5)
+        {topCategoriesProducts.filter((product)=> product.mainCategory === topCategory).filter((_, index) => index < 5)
             .map((item) => {
             return <ProductCard key={item.id} product={item}  /> 
         })}

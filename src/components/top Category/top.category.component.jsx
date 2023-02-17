@@ -7,10 +7,10 @@ import { selectTopCategoriesProducts } from "../../store/products reducer/produc
 const TopCategory = () => {
     const topCategoriesProducts = useSelector(selectTopCategoriesProducts);
     const {topCategory} = useParams();
-    const products = topCategoriesProducts.filter((product)=> product.categoryDetails.MainCategory === topCategory)
+    const products = topCategoriesProducts.filter((product)=> product.mainCategory === topCategory)
     return(
         <div>
-        <ProductsCard children= {topCategory} headerType="noLinkHeader" products={products}  />
+        <ProductsCard children= {topCategory} headerType="linkHeader" products={products}  />
         </div>
     )
 }

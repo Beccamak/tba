@@ -1,13 +1,15 @@
 .deals-section{
     background-color: #FFF;
-    margin: 0 4.8rem 4.8rem 4.8rem;
+    margin: 0 9rem 4.8rem 9rem;
     transition: transform 1s, opacity 1s;
+    position: relative;
+    
+    
     
     
   }
   
   .deals-products{
-    position: relative;
     display: flex;
     /* min-width: 18rem; */
      /* max-width: 250px;  */
@@ -45,13 +47,13 @@
   transition: opacity 0.5s ease-in-out; 
   background-color: #F5B216;
   color: #FFFFFF;
-  z-index: 1000;
+  /* z-index: 1000; */
   /* position: fixed; */
 }
-.left{
+.t-left{
   left: 0;
 }
-.right{
+.t-right{
   right: 0;
 }
 /* .wrapper{

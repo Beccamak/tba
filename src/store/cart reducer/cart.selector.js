@@ -1,4 +1,4 @@
-import { toContainHTML } from "@testing-library/jest-dom/dist/matchers";
+
 import { createSelector } from "reselect";
 
 
@@ -10,11 +10,13 @@ export const selectCartReducer = (state) => {
 
 export const selectCartItems = createSelector(
     [selectCartReducer], (cart) => cart.cartItems
+
     
 )
 
 export const selectCartCount = createSelector(
     [selectCartItems], (cartItems) => cartItems.reduce((count, cartItem) => {
+        console.log("Selector", cartItems);
         return cartItem.quantity + count
     }, 0)
 )

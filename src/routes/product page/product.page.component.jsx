@@ -15,6 +15,7 @@ const ProductPage = ({product}) => {
 
     const addProductToCart = () => {
         dispatch(addItemToCart(cartItems, product)); 
+        
     }    
     const removeProductFromCart = () => {
         dispatch(removeItemFromCart(cartItems, product)); 

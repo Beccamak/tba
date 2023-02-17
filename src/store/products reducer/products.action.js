@@ -4,6 +4,9 @@ import { PRODUCTS_ACTION_TYPES } from "./products.types";
 import products from "../../THE_PRODUCTS";
 
 
+
+console.log(products);
+
 export const fetchProductsStart = () => {
     return createAction(PRODUCTS_ACTION_TYPES.FETCH_PRODUCTS_START);
 }

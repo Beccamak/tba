@@ -1,0 +1,9 @@
+.timer{
+    display: flex;
+    color: #F5B216;
+    font-family: 'Rubik';
+
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 155%;
+}

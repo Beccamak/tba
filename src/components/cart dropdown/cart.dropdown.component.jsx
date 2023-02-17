@@ -8,31 +8,34 @@ import {
 import { useSelector } from "react-redux";
 import CartItem from "../cart-item/cart.item.component";
 import FlashSales from "../flash sales/flash.sales.component";
+import { useLocation } from "react-router-dom";
 
 const CartDropdown = () => {
   const navigate = useNavigate();
   const cartItems = useSelector(selectCartItems);
+  console.log(cartItems);
   const cartCount = useSelector(selectCartCount);
   const checkoutHandler = () => navigate("/checkout");
   const onShopNowHandler = () => navigate("/");
-
+  const location = useLocation();
+console.log(location, "cart");
   return (
     <div classNamme="cart-dropdown">
       {cartCount ? (
         <div className="container">
           <p className="shopping-cart">Shopping cart</p>
           <div className=" shopping-cart-con">
-            <div classNamme="cart-items">
+            <div className="cart-table">
               <div className="cart-container">
                 <div className="cart-header">
-                  <div className="cart-block">
-                    <span>Product</span>
+                  <div className="cart-block block-item">
+                    <span>Item Details</span>
                   </div>
-                  <div className="cart-block">
-                    <span>Description</span>
-                  </div>
-                  <div className="cart-block">
+                  <div className="cart-block block-quantity">
                     <span>Quantity</span>
+                  </div>
+                  <div className="cart-block block-price">
+                    <span>Price</span>
                   </div>
                 </div>
 
@@ -69,7 +72,7 @@ const CartDropdown = () => {
           <p className="cart-sub-text">
             You have not added any item to your cart
           </p>
-          <Button children="Shop Now" onClickHandler={onShopNowHandler} />
+          <Button children="Shop Now" buttonType="filled" onClickHandler={onShopNowHandler} />
         </div>
       )}
 

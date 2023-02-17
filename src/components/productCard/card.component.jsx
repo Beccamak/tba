@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const ProductCard = ({product}) => {
     const [link, setLink] = useState("");
-    const {imgUrl , name, price, flashSale, discount} = product;
+    const {imgUrl , name, price, flashSale, discount, inventory} = product;
     const dispatch = useDispatch();  
     const cartItems = useSelector(selectCartItems);          
     const {setCurrentProduct} = useContext(DisplayDetails);
@@ -32,21 +32,29 @@ const ProductCard = ({product}) => {
    }
   
     return(
-        <Link to={`/${link}`}>
-        { <div className="product-card-container" onMouseEnter={onProductClickHandler}>
+        <Link className="product-card-container" to={`/${link}`}>
+        { <div  onMouseEnter={onProductClickHandler}>
         {flashSale && <div className='percent-decrease'>
              <span className='percentage'>-{discount}%</span>
          </div>}
              <div className='img-container'>
-             <img className="product-image" src={imgUrl} alt={name} />      
+             <img className="product-image" src={imgUrl} alt={name} />  
              </div>
              <div className='product-details'>
                  <p className='product-name'>{name}</p>
+                 <p className="product-discount">$ {price-(price * (discount/100))}</p>
                  <p className="product-price">$ {price}</p>
              </div>
-             <div className='card-add-to-cart' onMouseEnter={onMouseEnterHandler}>
-            {/* <Button buttonType="filledCard" children="Add to Cart"   onClickHandler={addItemHandler} />*/}
+
+             <div className='inventory-details'>
+             <p className='inv-left'>{inventory} items left</p>
+             <div className='inv-bar'>
+             <div className='inv-progress-bar'></div>
              </div>
+             </div>
+             {/*<div className='card-add-to-cart' onMouseEnter={onMouseEnterHandler}>
+             <Button buttonType="filledCard" children="Add to Cart"   onClickHandler={addItemHandler} />
+    </div>*/}
          </div>}
         </Link>
     )

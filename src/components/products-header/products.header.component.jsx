@@ -1,24 +1,21 @@
 import './products.header.styles.css';
 import {Link} from 'react-router-dom';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const ProductsHeader = ({headerType, children, route, onClickHandler, previewRoute}) => {
-    
-        const PRODUCT_HEADER_CLASSES = {
-        flashSales : "flash_sale_product_header",
-        normal: 'normal',
-        noLinkHeader: 'noLinkHeader',
-        previewHeader: "previewHeader"
-    }
+console.log("router", route);
 
-    // const {title, additionalInfo} = productTitle;
     return(
         <div className= {`products-header-container`}>
-            <span>{children}</span>
-            {headerType !=="noLinkHeader" && headerType !=="previewHeader" && <Link to={`/${route}`} onClick={onClickHandler}>View all</Link>}
-            {headerType === "previewHeader" && <Link to={previewRoute}>View All</Link>}
+            <span className='secondary-heading'>{children}</span>
+            {headerType === "normal" && ""}
+            {headerType === "linkHeader"? <Link className='secondary-heading see-more' to={`${route}`} >See More
+            <FontAwesomeIcon size='1x' icon={faAngleRight} />
+            </Link>: ""}
         </div>
     )
 }
 
-export default ProductsHeader;
+export default ProductsHeader;  

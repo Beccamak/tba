@@ -12,7 +12,7 @@ const TopCategoriesPreview = () => {
     { 
         topCategories.map((topCategory) => {
             return   <div className='category-preview-section'>
-            <ProductsHeader children={topCategory} headerType="previewHeader"  previewRoute={topCategory}/>
+            <ProductsHeader children={topCategory} headerType="linkHeader"  route={topCategory}/>
             <div >
             <TopCategoryPreview topCategory={topCategory}/>
 

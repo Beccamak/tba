@@ -1,14 +1,34 @@
+.trending{
+  width: 100%;
+  background-color: #FFFFFF;
+  padding-bottom: 2.4rem;
+  margin-bottom: 6.4rem;
+}
+.trending-header-container{
+    font-size: 1.8rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.4rem 9rem 2.4rem 9rem;
+    margin-bottom: 5.4rem;
+    border-bottom: 1px solid #EDEDEB;
+    color: #000000;
+}
+
 .trending-section{
     background-color: #FFF;
-    margin: 0 4.8rem 4.8rem 4.8rem;
+    margin: 0 9rem 6.2rem 9rem;
+    
     transition: transform 1s, opacity 1s;
     
     
   }
   
   .trending-products{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(236px, auto));
-    gap: 1.6rem;
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(236px, 236px)); */
+    gap: 1.2rem;
+    justify-content: center ;
     
 }

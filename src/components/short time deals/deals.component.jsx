@@ -9,12 +9,10 @@ const ShortDeals = ({children, headerType, route, products}) => {
     const productContainerRef = useRef();
     const onScrollLeft = () => {
         const containerWidth = productContainerRef.current.getBoundingClientRect().width;
-        console.log(containerWidth);
         productContainerRef.current.scrollLeft -= containerWidth;
     }
     const onScrollRight = () => {
         const containerWidth = productContainerRef.current.getBoundingClientRect().width;
-        console.log(containerWidth);
         productContainerRef.current.scrollLeft += containerWidth;
     }
     return(
@@ -29,8 +27,8 @@ const ShortDeals = ({children, headerType, route, products}) => {
              })
         }
         
-        <FontAwesomeIcon icon={faAngleLeft} className="btn-slie left" onClick={onScrollLeft} />
-        <FontAwesomeIcon icon={faAngleRight} className="btn-slie right" onClick={onScrollRight}/>
+        <FontAwesomeIcon icon={faAngleLeft} className="btn-slie t-left" onClick={onScrollLeft} />
+        <FontAwesomeIcon icon={faAngleRight} className="btn-slie t-right" onClick={onScrollRight}/>
         </div>
        
         </div>

@@ -2,38 +2,49 @@
       background-color: #FFF;
         margin-bottom: 4.8rem;
         transition: transform 1s, opacity 1s;
-      
-}
+        margin-bottom: 8.6rem;
+        padding-bottom: 4.8rem;
+        
+    }
 .top-categories-container{
-    display: flex;
-    justify-content: space-between;
-    gap: 0.7rem;
-    flex-wrap: wrap;
-    /* grid-template-columns: repeat(6, 1fr); */
-    padding: 0 1.6rem 0.5rem 1.6rem;
-    margin-bottom: 4.8rem;
+    display: grid;
+    column-gap: 5.6rem;
+    row-gap: 6.4rem;
+    grid-template-columns: repeat(4, 25rem);
+    padding: 0 9rem 0.5rem 9rem;
+    /* margin-bottom: 4.8rem; */
+    /* margin: 0 9rem 4.8rem 9rem; */
+    margin-top: 5.6rem;
+    margin-bottom: 8.4rem;
     width: 100%;
 }
 
 
 .top-category{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    min-width: 30%;
-    height: 30rem;
-    border: 1px solid black;
-    flex: 1 1 300px; 
+    width: 100%;
+    /* height: 22.7rem; */
+    /* flex: 1 1 300px;  */
     /* margin-right: 0.7rem; */
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
+    
     overflow: hidden;
-    position: relative;
-   
+    border-radius: 1rem;
+   cursor: pointer;
+}
+.cat-pic-con{
+    height: 22rem;
+    margin-bottom: 2.4rem;
+    background-color: rgba(245, 178, 22, 0.2);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .cat-pic{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 22rem;
+    /* height: 80%; */
+    object-fit: contain;
+    height: 21rem;
     transition: transform 5s linear;
 }
 .cat-pic:hover{
@@ -41,13 +52,10 @@
     
 }
 .cat-text{
+    font-weight: 500;
     font-size: 1.6rem;
-    text-align: center;
-    padding: 1.2rem 2.4rem;
-    font-weight: 700;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    line-height: 2.48rem;
+
    
 
 }
@@ -57,13 +65,3 @@
 .none{
     transform: translateX(100%);
 }
-/* 
-min-width: 30%;
-    height: 240px;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-   
-    overflow: hidden; */

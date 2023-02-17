@@ -25,7 +25,7 @@ export const selectTopBrandsProducts = createSelector(
   [selectProducts],
   (products) =>
     products.filter((product) => {
-      return product.brandDetails.topBrand === true;
+      return product.topBrand === true;
     })
 );
 
@@ -33,7 +33,7 @@ export const selectTopCategoriesProducts = createSelector(
   [selectProducts],
   (products) =>
     products.filter((product) => {
-      return product.categoryDetails.topCategory === true;
+      return product.topCategory === true;
     })
 );
 
@@ -41,8 +41,8 @@ export const selectTopCategories = createSelector(
   [selectTopCategoriesProducts],
   (products) =>
     products.reduce((acc, product, index) => {
-      if (acc && !acc.includes(product.categoryDetails.MainCategory)) {
-        acc[index] = product.categoryDetails.MainCategory;
+      if (acc && !acc.includes(product.mainCategory)) {
+        acc[index] = product.mainCategory;
       }
       return acc;
     }, [])
@@ -51,8 +51,8 @@ export const selectTopBrands = createSelector(
   [selectTopBrandsProducts],
   (products) =>
     products.reduce((acc, product, index) => {
-      if (acc && !acc.includes(product.brandDetails.brandName)) {
-        acc[index] = product.brandDetails.brandName;
+      if (acc && !acc.includes(product.brandName)) {
+        acc[index] = product.brandName;
       }
       return acc;
     }, [])
@@ -63,10 +63,10 @@ export const selectCurrentCategory = createSelector(
 );
 export const selectCurrentCategoryProducts = createSelector(
   [selectCurrentCategory, selectProducts],
-  (currentCategory, products) => products
-  //  products.filter((product) => {
-  // return product.categoryDetails.category === currentCategory;
-  // })
+  (currentCategory, products) => 
+   products.filter((product) => {
+  return product.category === currentCategory;
+  })
 );
 
 export const selectSearchString = createSelector(
