@@ -5,14 +5,18 @@ import { selectCartItems } from '../../store/cart reducer/cart.selector';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { addItemToCart, removeItemFromCart} from '../../store/cart reducer/cart.action';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import Description from '../../components/description/description.component';
+import Return from '../../components/return policy/return.component';
+import Reviews from '../../components/reviews/reviews.component';
 
 const ProductPage = ({product}) => {
     const cartItems = useSelector(selectCartItems);
     const dispatch = useDispatch();
 
-    const accordionRefs = useRef([]);
-
+   const [descriptionActive, setDescriptionActive] = useState(true);
+   const [returnActive, setReturnActive] = useState(false);
+   const [reviewsActive, setReviewsActive] = useState(false);
     const addProductToCart = () => {
         dispatch(addItemToCart(cartItems, product)); 
         
@@ -22,18 +26,21 @@ const ProductPage = ({product}) => {
     }    
     if (product === null) return;
 
-    const {imgUrl , name, price,  brand, stars, rating, colors, description, features,specifications, delivery } = product;
-       const details = [
-        {"product features": features},
-        {"product specifications" : specifications},
-        {"delivery & returns" : delivery}
-    ]
-
-    const onIconClick = (index) => {
-        console.log( "before",accordionRefs.current[index].classList) 
-        accordionRefs.current[index].classList.toggle('active-bar')
-        console.log("after", accordionRefs.current[index].classList) 
-               console.log(index)
+    const {imgUrl , name, price,  brand, stars, rating, colors, description, features,specifications, delivery, discount, flashSale } = product;
+   const onDescriptionClickHandler = () => {
+        setDescriptionActive(true);
+        setReturnActive(false);
+        setReviewsActive(false);
+    }
+   const  onReturnClickHandler = () => {
+        setDescriptionActive(false);
+        setReturnActive(true);
+        setReviewsActive(false);
+    }
+  const onReviewsClickHandler = () => {
+        setDescriptionActive(false);
+        setReturnActive(false);
+        setReviewsActive(true);
     }
 
     return(
@@ -47,8 +54,6 @@ const ProductPage = ({product}) => {
            </div>
            <div className='product-info'>
                <h2 className='product-info-name'>{name}</h2>
-               <p className='brand-name'>Brand: {brand}</p>
-               <p className='sku'>SKU: SKKER-345-TRE</p>
                <div className='ratings'>
                <div >
                {               
@@ -59,21 +64,27 @@ const ProductPage = ({product}) => {
                     })
                 }               
                 </div>
-                <span>{rating} Ratings</span>
+                <span>{rating} 4.0</span>
+                <span>22 Customer Reviews</span>
                 </div>
+                <p className='brand-name'>Brand: {brand}</p>
+                <p className='sku'>SKU: SKKER-345-TRE</p>
 
-
-               <p className="product-info-price">$ {price}</p>
-               <div className='colors'>
-               {colors.map((color) => <div className='color' style={{backgroundColor: `${color}`}}></div>)}
-               </div>
-                <p className='description'>{description}</p>
-{/*
-               <div className='qnty-selector'>
-               <span className='qnty-selector-btn'>-</span>
-               <span className='qnty-selector-btn'>1</span>
-               <span className='qnty-selector-btn'>+</span>
-               </div>
+                {
+                    flashSale?
+                    <p className="product-info-price">$ {price}</p>:
+                    <div>
+                    <p className="product-info-price">$ {price-(price*(discount/100))}</p>
+                    <p className="product-info-price">$ {price}</p>
+                    
+                    </div>
+                }
+                <div className='qnty-selector'>
+                <span className='qnty-selector-btn'>-</span>
+                <span className='qnty-selector-btn'>1</span>
+                <span className='qnty-selector-btn'>+</span>
+                </div>
+                {/*
                
                <Button buttonType="filled" children="-" onClickHandler={removeProductFromCart}/> 
                <Button buttonType="filled" children="+" onClickHandler={addProductToCart}/> */}
@@ -82,38 +93,27 @@ const ProductPage = ({product}) => {
                </div>
            </div>
        </div>
-       <div className='product-details-bar'>
-       {
-          details.map((detail, index) => {
-               return <div ref = {(element) => {return accordionRefs.current[index] = element;}} className='bar-itm'>
-                           <p className='number'>0{index + 1}</p>
-                           <p className='text'>{Object.keys(detail)}</p>
-                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="bar-icon w-6 h-6" onClick={() => onIconClick(index)}>
-                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                       </svg>
-                       <div className='hidden-box'>
-                       <ul>
-                       {detail[(Object.keys(detail))].map((feature) => <li>{feature}</li>)}
-                       </ul>
-                       </div>
-       </div>
-           })
-       }
-      </div>
+     
 
     
        </div>
+       <div className='product-mid'>
+       <p>Sold by <span style={{color:"#F5B216"}}>TotalBeauty Affairs</span></p>
+       </div>
        <div className='product-down'>
        <div className='down-details'>
-       <p className='despn'>Description</p>
-       <p>Delivery & Returns</p>
-       <p>Reviews</p>
+       <p className={`details-itm ${descriptionActive? "active-header": ""}`} onClick={onDescriptionClickHandler}>Description</p>
+       <p className={`details-itm ${returnActive? "active-header": ""}`} onClick={onReturnClickHandler}>Delivery & Returns</p>
+       <p className={`details-itm ${reviewsActive? "active-header": ""}`} onClick={onReviewsClickHandler}>Reviews</p>
        </div>
-       <div className=''>
-       <p>LoremIpsum sunt excepteur magna eu labore. Sunt aliqua fugiat eu reprehenderit deserunt. Et aute do Lorem commodo enim minim. Enim non duis fugiat duis esse enim adipisicing. Ex aliquip deserunt duis tempor velit nulla reprehenderit. Labore et mollit nulla anim incididunt ad deserunt esse deserunt.</p>
+       <div className='details-box'>
+       {descriptionActive && <Description description={description} specifications={specifications} features={features} />}
+       {returnActive&& <Return  />}
+       {reviewsActive && <Reviews  />}
        </div>
-       <div className='returns'></div>
-       <div className='reviews'></div>
+      
+      
+      
        </div>
        </div>
 

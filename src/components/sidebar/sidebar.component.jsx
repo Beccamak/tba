@@ -1,6 +1,6 @@
 import './sidebar.styles.css';
 import CategoriesList from '../categories-list/categories-list.component';
-import BrandList from '../brand-list/brand-list.component';
+// import BrandList from '../brand-list/brand-list.component';
 import PriceSlider from '../price slider/price.slider.component';
 
 const Sidebar = ({products}) => {
@@ -12,7 +12,7 @@ const Sidebar = ({products}) => {
             </div>
             <div className='sidebar-section'>
             <h2 className='sidebar-header' >Brand</h2>
-            <BrandList />
+           {/* <BrandList />*/}
             </div>
             <div className='sidebar-section'>
             <h2 className='sidebar-header' >Price</h2>

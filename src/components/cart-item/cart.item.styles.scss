@@ -39,6 +39,9 @@
     }
     
     .cart-quantity{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .itm-minus, .itm-plus{
             font-weight: 500;
             // font-size: 1.4rem;
@@ -46,8 +49,21 @@
             background-color:  #D9D9D9;
             width: 3.2rem;
             cursor: pointer;
+            height: 2.1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
             
             
+        }
+        .itm-plus{
+            color: #F5b216;
+        }
+        .itm-minus{
+            color: #696464;
+            opacity: 0.8;
+
         }
         .itm-qtn{
             font-size: 1.4rem;
@@ -66,13 +82,15 @@
     }
     .cart-price{
         
-        font-weight: 400;
+        font-weight: 600;
         font-size: 1.2rem;
         // line-height: 2.4rem;
         justify-self: center;
         text-decoration: line-through;
         color: #F5b216;
-        opacity: 0.4;
+        // opacity: 0.4;
+        justify-self: center;
+
 
     }
 }

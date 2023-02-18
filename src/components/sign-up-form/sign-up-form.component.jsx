@@ -6,6 +6,7 @@ createUserDocumentFromAuth} from '../../utils/firebase';
 import { userSignInUpStart, userSignInUpSuccess, userSignInUpFailed } from '../../store/userReducer/user.action';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Axios from 'axios';
  const defaultFormFields = {
         firstName: '',
         lastName: '',
@@ -31,8 +32,16 @@ const SignUpForm = () =>{
             return;
         }
         try {
-            const {user} = await createAuthUserWithEmailAndPassword (email, password);
-             await createUserDocumentFromAuth(user, {firstName, lastName})
+            const {user} = await Axios.post("https://total-beauty-affairs-backend.onrender.com/auth/register", {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: password
+           
+            })
+            console.log(user);
+            // const {user} = await createAuthUserWithEmailAndPassword (email, password);
+            //  await createUserDocumentFromAuth(user, {firstName, lastName})
             resetFormFields();
             dispatch(userSignInUpSuccess(user));
             onSuccessfulSignUp();

@@ -30,10 +30,13 @@ const CartItem = ({cartItem}) => {
         </div>
          
             <div className="cart-quantity">
-            
-            <FontAwesomeIcon className='itm-minus' icon={faMinus} onClick={onMinusClickHandler} />
+            <div className='itm-minus'>
+            <FontAwesomeIcon  icon={faMinus} onClick={onMinusClickHandler} />
+            </div>
             <span className='itm-qtn'>{quantity}</span>
-            <FontAwesomeIcon className='itm-plus' icon={faPlus} onClick={onPlusClickHandler}/>
+            <div className='itm-plus' >
+            <FontAwesomeIcon icon={faPlus} onClick={onPlusClickHandler}/>
+            </div>
            
             </div>
             <div>

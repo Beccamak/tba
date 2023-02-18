@@ -4,21 +4,28 @@ import { Link, useNavigate } from "react-router-dom";
 import {
   selectCartCount,
   selectCartItems,
+  selectCartTotal,
 } from "../../store/cart reducer/cart.selector";
 import { useSelector } from "react-redux";
 import CartItem from "../cart-item/cart.item.component";
 import FlashSales from "../flash sales/flash.sales.component";
 import { useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRecycle } from "@fortawesome/free-solid-svg-icons";
+
 
 const CartDropdown = () => {
   const navigate = useNavigate();
   const cartItems = useSelector(selectCartItems);
   console.log(cartItems);
   const cartCount = useSelector(selectCartCount);
-  const checkoutHandler = () => navigate("/checkout");
+  const cartTotal = useSelector(selectCartTotal);
+  const checkOutHandler = () => navigate("/checkout");
   const onShopNowHandler = () => navigate("/");
   const location = useLocation();
 console.log(location, "cart");
+
+
   return (
     <div classNamme="cart-dropdown">
       {cartCount ? (
@@ -43,11 +50,31 @@ console.log(location, "cart");
                   <CartItem cartItem={item} />
                 ))}
               </div>
+
+              <p className="clear">
+              <FontAwesomeIcon icon={faRecycle} />
+              <span>Clear Cart</span>
+              </p>
             </div>
             <div className="cart-summary">
-              <div>
+              <div className="summary-hd">
                 <span>Cart Summary</span>
-                <span>{`${cartCount}`}</span>
+                <span>{`(${cartCount})`}</span>
+              </div>
+              <div className="summary-hd sub-total">
+                <span>Sub total</span>
+                <span>{`${cartTotal}`}</span>
+              </div>
+              <div className=" summary-hd del-charges">
+                <span>Delivery Charges</span>
+                <span>500</span>
+              </div>
+              <div className="summary-hd cart-total">
+                <span>Total</span>
+                <span>{`${cartTotal + 500}`}</span>
+              </div>
+              <div className="cart-btn">
+              <Button buttonType="filled" children="Continut to Checkout" onClickHandler={checkOutHandler} />
               </div>
             </div>
           </div>
