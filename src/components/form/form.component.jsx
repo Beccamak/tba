@@ -20,7 +20,44 @@ const Form = ({ header, handleSubmit, formDetails, buttonDetails}
     const onFormSuccessfulSignUp = () => navigate("/");
     const signUpOrInWithGoogle = async (event) => {
         event.preventDefault();
-        dispatch(userSignInUpStart());
+        dispatch(userSignInUpStart()); <div>
+        <header className='sign-in-title'>{header}</header>
+        <form onSubmit={handleSubmit}>
+        <div className='label-input'>
+        <input className='form-input'  type="text" name="firstName"  placeholder='First Name'value={firstName} onChange={handleChange} minLength="6" required/>
+        </div>
+        <div className='label-input'>
+        <input  className='form-input' type="text" name="lastName"  placeholder='Last Name' value={lastName} onChange={handleChange} minLength="6"  required/>
+        </div>
+        <div className='label-input'>
+        <input className='form-input' type="email" name="email" value={email}  placeholder='Email' onChange={handleChange} required/>
+        </div>
+        <div className='label-input'>
+         <input className='form-input' type={type} name="password" value={password} placeholder='Password' onChange={handleChange} required/>
+        {/*<i className={`bx bx-${hideOrShow} eye-icon`} onClick={onEyeIconClick}></i>
+    */} 
+        </div>
+         <div className='label-input'>
+         <input className='form-input' type={type} name="confirmPassword" value={confirmPassword} placeholder=' Confirm Password' onChange={handleChange} required/>
+         <i className={`bx bx-${hideOrShow} eye-icon`} onClick={onEyeIconClick}></i>
+         </div>
+        
+         <div className='forgot-pass-con' >
+        <Link className='forgot-password' to='/'>Forgot Password?</Link>
+        </div>
+        <div className='btn-group'>
+        <button className='btn log-in'>{actionIsLoading? <Spinner spinner="text" /> :text}</button>
+        <div className='line'></div>
+        <div className='btn-container'>
+        <button onClick={signUpOrInWithGoogle} className='btn log-in-google'>
+        <i className='bx bxl-google google-icon'></i>
+        <span className='login-text'>{actionIsLoading? <Spinner spinner="small"/> : googleText}</span>
+        </button>
+        </div>
+        
+        </div>
+        </form> 
+        </div>
         try {
             const {user} = await signInWithGooglePopup();
             await createUserDocumentFromAuth(user);
@@ -50,10 +87,10 @@ const Form = ({ header, handleSubmit, formDetails, buttonDetails}
         <header className='sign-in-title'>{header}</header>
         <form onSubmit={handleSubmit}>
         <div className='label-input'>
-        <input className='form-input'  type="text" name="firstName"  placeholder='First Name'value={firstName} onChange={handleChange} required/>
+        <input className='form-input'  type="text" name="firstName"  placeholder='First Name'value={firstName} onChange={handleChange} minLength="6" required/>
         </div>
         <div className='label-input'>
-        <input  className='form-input' type="text" name="lastName"  placeholder='Last Name' value={lastName} onChange={handleChange} required/>
+        <input  className='form-input' type="text" name="lastName"  placeholder='Last Name' value={lastName} onChange={handleChange} minLength="6"  required/>
         </div>
         <div className='label-input'>
         <input className='form-input' type="email" name="email" value={email}  placeholder='Email' onChange={handleChange} required/>

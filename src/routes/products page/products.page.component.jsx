@@ -6,7 +6,9 @@ const ProductsPage = ({productsDetails}) => {
     const {children, headerType, route, products} = productsDetails;
     return(
         <div>
+
         <div className='products-page'>
+        <Sidebar products={products}/>
             <ProductsCard children={children} headerType={headerType} route={route} products={products}/>
         </div>
         </div>

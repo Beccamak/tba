@@ -21,7 +21,7 @@ const TrendingSale = () => {
             flashSalesProducts.filter((_, index) => {
                 return index < 5
             }).map((product) => {
-                return <ProductCard key={product.id} product={product}/>
+                return <ProductCard key={product.id} product={product} />
              })
         }
        

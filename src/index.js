@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import {store} from './store/store';
 import { FilterDetailsProvider } from './contexts/filter.details';
 import ScrollTopToDown from './components/scrollTopToDown/scrollTopToDown.component';
+import { Fragment } from 'react';
 
 const container = document.getElementById('root');
 const root = createRoot( container );
@@ -31,7 +32,7 @@ root.render(
   </DisplayDetailsProvider>
   </BrowserRouter>
   </Provider>
-  </React.StrictMode>
+   </React.StrictMode>
 )
 // ReactDOM.render(
 //   <React.StrictMode>

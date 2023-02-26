@@ -8,7 +8,7 @@ import { addItemToCart } from '../../store/cart reducer/cart.action';
 import { selectCartItems } from '../../store/cart reducer/cart.selector';
 import { useDispatch, useSelector } from 'react-redux';
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product, showInventory}) => {
     const [link, setLink] = useState("");
     const {imgUrl , name, price, flashSale, discount, inventory} = product;
     const dispatch = useDispatch();  
@@ -45,13 +45,14 @@ const ProductCard = ({product}) => {
                  <p className="product-discount">$ {price-(price * (discount/100))}</p>
                  <p className="product-price">$ {price}</p>
              </div>
-
-             <div className='inventory-details'>
+            {showInventory?<div className='inventory-details'>
              <p className='inv-left'>{inventory} items left</p>
              <div className='inv-bar'>
              <div className='inv-progress-bar'></div>
              </div>
              </div>
+            :""}
+             
              {/*<div className='card-add-to-cart' onMouseEnter={onMouseEnterHandler}>
              <Button buttonType="filledCard" children="Add to Cart"   onClickHandler={addItemHandler} />
     </div>*/}

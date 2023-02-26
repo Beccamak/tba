@@ -7,7 +7,9 @@ import { userSignInUpFailed, userSignInUpStart, userSignInUpSuccess } from '../.
 import { selectActionIsLoading } from '../../store/userReducer/user.selector';
 import Spinner from '../spinner/spinner.component';
 import { useNavigate } from 'react-router-dom';
-import { Axios } from 'axios';
+import Axios from 'axios';
+import Button from '../button/button.component';
+import { ToastContainer, toast } from 'react-toastify';
 
 const defaultFormFields = {
     email: "",
@@ -18,12 +20,13 @@ const defaultFormFields = {
 
 const SignInForm = () =>{
     const [formFields, setFormFields] = useState(defaultFormFields);
-    const [toggleIcon, setToggleIcon] = useState(true);
-    const [hideOrShow, setHideOrShow] = useState("hide");
    const dispatch = useDispatch();
    const actionIsLoading = useSelector(selectActionIsLoading);
     const {email, password, type} = formFields;
     const navigate = useNavigate();
+    const [loginState, setLoginState] = useState('false');
+    const [loginWithGoogleState, setLoginWithGoogleState] = useState('false');
+
 
     const onSuccessfulSignIn = () => navigate("/")
 
@@ -33,33 +36,84 @@ const SignInForm = () =>{
     }
     const signInWithGoogle = async (event) => {
         event.preventDefault();
+        dispatch(userSignInUpStart());
+        setLoginWithGoogleState(true);
        
+    }
+    const onLogInClickHandler = () => {
+        
+    }
+    const handleChange = (event) => {
+        const {name, value} = event.target;
+        setFormFields({...formFields, [name]: value});
+    };
+    const errorHandler = (msg) => {
+        toast.error(msg, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+    }
+    const loginSuccess = (msg) => {
+        toast.success(msg, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
     }
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setLoginState(true);
+        dispatch(userSignInUpStart());
 
         try {
-           const {user} = await Axios.post("localhost:5000/auth/login",{
+           await Axios.post("https://total-beauty-affairs-backend.onrender.com/auth/login",{
             email: email,
             password: password
-           } );
-           dispatch(userSignInUpSuccess(user)); 
-           resetFormFields();
-           onSuccessfulSignIn();
+           } ).then(res=> {
+            if(res.data==='Invalid credentials'){
+                errorHandler("email does not exist");
+                setLoginState(false);
+                return;
+                
+            }
+            if(res.data==='Please input the correct password'){
+               errorHandler("Invalid password");
+                setLoginState(false);
+                return;
+                
+            }
+
+                console.log(res);
+                const user = res.data.user; 
+                if(user){
+                setLoginState(false);
+                dispatch(userSignInUpSuccess(user)); 
+                loginSuccess("Login sucess");
+                resetFormFields();
+                onSuccessfulSignIn(); 
+                
+                }
+             
+           });
+           
+          
            
         } catch (error) {
+            setLoginState(false);
             switch(error.code){
-                case 'auth/wrong-password':
-                  alert('Incorrect password for email');
-                  break;
-                case 'auth/invalid-email':
-                  alert('Please enter a valid email address');
-                  break;
-                case 'auth/user-not-found':
-                  alert('No user associated with this email');
-                  break;
-                default:
-                    console.log(error.message);
+                  default:
+                   errorHandler(error.message);
 
                   
               }
@@ -67,21 +121,7 @@ const SignInForm = () =>{
         }
     }
    
-    const handleChange = (event) => {
-        const {name, value} = event.target;
-        setFormFields({...formFields, [name]: value});
-    };
-    const onEyeIconClick = () => {
-        setToggleIcon(!toggleIcon);
-        if (toggleIcon) {
-            setHideOrShow("show")
-            setFormFields({...formFields, type: "text"});
-        }else{
-            setHideOrShow("hide")
-            setFormFields({...formFields, type: "password"});
-        }
-        
-    }
+  
     return(
         <div className='sign-in-container'>
         <header className='sign-in-title'>Login</header>
@@ -90,25 +130,28 @@ const SignInForm = () =>{
             <input className='form-input' type="text" name="email" value={email}  placeholder='Email' onChange={handleChange} required/>
             </div>
             <div className='label-input'>
-             <input className='form-input' type={type} name="password" value={password} placeholder='Password' onChange={handleChange} required/>
-             <i className={`bx bx-${hideOrShow} eye-icon`} onClick={onEyeIconClick}></i>
+             <input className='form-input' type="password" name="password" value={password} placeholder='Password' onChange={handleChange} required/>
+
              </div>
             <div className='hide-label-input'>
-             <input className='form-input' type={type} name="password" value={password} placeholder='Password' onChange={handleChange} required/>
-             <i className={`bx bx-${hideOrShow} eye-icon`} onClick={onEyeIconClick}></i>
+             <input className='form-input' type="password" name="password" value={password} placeholder='Password' onChange={handleChange} required/>
              </div>
             <div className='forgot-pass-con' >
             <Link className='forgot-password' to='/'>Forgot Password?</Link>
             </div>
             <div className='btn-group'>
-            <button className='btn log-in'>{actionIsLoading? <Spinner spinner="small" />:"Log in"}</button>
+            {(loginState===true && actionIsLoading===true)? <Spinner />: <Button children="Log in" buttonType="filled" />}
             <div className='line'></div>
-            <button className='btn log-in-google' onClick={signInWithGoogle}>
-            <i className='bx bxl-google google-icon'></i>
-            <span className='login-text'>{actionIsLoading? <Spinner spinner="small" />:"Login with google"}</span>
-            </button>
+           
             </div>
+            
             </form> 
+             {
+                
+            (loginWithGoogleState===true && actionIsLoading===true)? <Spinner />: <Button children="Log in" buttonType="filled" />}
+          
+            <ToastContainer /> 
+            
         </div>
     )
 }

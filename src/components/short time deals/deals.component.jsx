@@ -23,7 +23,7 @@ const ShortDeals = ({children, headerType, route, products}) => {
             products.filter((_, index) => {
                 return index < 15
             }).map((product) => {
-                return <ProductCard key={product.id} product={product}/>
+                return <ProductCard key={product.id} product={product} showInventory='true'/>
              })
         }
         
