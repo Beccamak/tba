@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './product.page.styles.scss';
 import Button from '../../components/button/button.component';
 import { selectCartItems } from '../../store/cart reducer/cart.selector';
@@ -9,10 +9,15 @@ import { useRef, useState } from 'react';
 import Description from '../../components/description/description.component';
 import Return from '../../components/return policy/return.component';
 import Reviews from '../../components/reviews/reviews.component';
+import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const ProductPage = ({product}) => {
     const cartItems = useSelector(selectCartItems);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const [quantity, setQuantity] = useState(1); 
 
    const [descriptionActive, setDescriptionActive] = useState(true);
    const [returnActive, setReturnActive] = useState(false);
@@ -26,7 +31,7 @@ const ProductPage = ({product}) => {
     }    
     if (product === null) return;
 
-    const {imgUrl , name, price,  brand, stars, rating, colors, description, features,specifications, delivery, discount, flashSale } = product;
+    const {imgUrl , name, price,  brand, stars, rating, colors, inventory, description, features,specifications, delivery, discount, flashSale } = product;
    const onDescriptionClickHandler = () => {
         setDescriptionActive(true);
         setReturnActive(false);
@@ -42,6 +47,19 @@ const ProductPage = ({product}) => {
         setReturnActive(false);
         setReviewsActive(true);
     }
+    const buyNowHandler = () =>{
+        //check if item lredy exist in crt items
+        dispatch(addItemToCart(cartItems, product));
+        navigate("/checkout");
+    }
+    const onPlusClickHandler = () =>{
+        setQuantity(quantity+1);
+    }  
+    const onMinusClickHandler = () =>{
+        if (quantity === 1) return;
+        setQuantity(quantity-1);
+    }
+
 
     return(
         <div className='container'>
@@ -71,26 +89,44 @@ const ProductPage = ({product}) => {
                 <p className='sku'>SKU: SKKER-345-TRE</p>
 
                 {
-                    flashSale?
-                    <p className="product-info-price">$ {price}</p>:
-                    <div>
+                    flashSale? 
+                    <div className='page-price'>
                     <p className="product-info-price">$ {price-(price*(discount/100))}</p>
-                    <p className="product-info-price">$ {price}</p>
+                    <p className="price-strike">$ {price}</p>
+                    <p>In stock</p>
                     
                     </div>
+                    :
+                    <div className='page-price'>
+                   
+                   <p className="product-info-price">$ {price}</p>
+                   <p className='in-stock'>In stock</p>
+                    </div>
                 }
-                <div className='qnty-selector'>
-                <span className='qnty-selector-btn'>-</span>
-                <span className='qnty-selector-btn'>1</span>
-                <span className='qnty-selector-btn'>+</span>
+                <div className="page-quantity">
+                <span>Quantity: </span>
+                <div className='pg-itm-minus'>
+                <FontAwesomeIcon  icon={faMinus} onClick={onMinusClickHandler} />
+                </div>
+                <span className='pg-itm-qtn'>{quantity}</span>
+                <div className='pg-itm-plus' >
+                <FontAwesomeIcon icon={faPlus} onClick={onPlusClickHandler}/>
+                </div>
+               
                 </div>
                 {/*
                
                <Button buttonType="filled" children="-" onClickHandler={removeProductFromCart}/> 
                <Button buttonType="filled" children="+" onClickHandler={addProductToCart}/> */}
                <div className='add'>
-               <Button buttonType="filled" children="Add to cart" onClickHandler={addProductToCart}/>
+               <div className='add-left'>
+               <Button buttonType="outlined" children="Add to cart" onClickHandler={addProductToCart}/>
                </div>
+               <div className='add-right'>
+               <Button buttonType="filled" children="buy now" onClickHandler={buyNowHandler}/>
+               </div>
+               </div>
+              
            </div>
        </div>
      

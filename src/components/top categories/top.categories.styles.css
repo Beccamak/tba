@@ -56,8 +56,9 @@
     font-size: 1.6rem;
     line-height: 2.48rem;
 
-   
-
+}
+.cat-text:hover{
+    font-weight: 700;
 }
 .transform{
     transform: translateX(0%);

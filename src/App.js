@@ -31,26 +31,29 @@ import SignUp from "./routes/sign up/sign.up.route";
 import SignIn from "./routes/sign in/sign.in.route";
 import AboutUs from "./routes/about us/about-us.component.jsx";
 import ContactUs from "./routes/contact-us/contact-us.component";
+import ProductsPage from "./routes/products page/products.page.component";
+import { selectTopCategoriesProducts } from "./store/products reducer/products.selector";
 const App = () => {
   const dispatch = useDispatch();
   const { currentProduct } = useContext(DisplayDetails);
   const isLoading = useSelector(selectIsLoading);
   const location = useLocation();
+  const currentTopCategory = 'Lip gloss'
+  const topCategoryProducts = useSelector(selectTopCategoriesProducts);
+
+ 
 
   // useEffect(() => {
-  //   addCollectionAndDocuments("categories", CATEGORIES)   
+  //   dispatch(fetchCategoriesOnAppLoad());
   // }, []);
-
-  useEffect(() => {
-    dispatch(fetchCategoriesOnAppLoad());
-  }, []);
   useEffect(() => {
     dispatch(fetchProductsOnAppLoad());
   }, []);
 
-  return isLoading ? (
-    <Spinner spinner="big"/>
-  ) : (
+  // return isLoading ? (
+  //   <Spinner spinner="big"/>
+  // ) : 
+  return(
     <div>
       <AnimatePresence>
         <Routes location={location} >
@@ -74,6 +77,14 @@ const App = () => {
             <Route path="/account" element={<AccountDropdown/>} />
             <Route path="/about-us" element={<AboutUs/>} />
             <Route path="/contact-us" element={<ContactUs/>} />
+            <Route path="/*" element={<ProductsPage productsDetails={{
+              children: currentTopCategory,
+              route: '',
+              headerType: "normal",
+              products: topCategoryProducts
+
+            }}
+              />} />
             </Route>
         </Routes>
       </AnimatePresence>

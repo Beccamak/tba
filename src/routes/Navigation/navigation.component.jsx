@@ -70,8 +70,10 @@ const Navigation = () => {
         <Fragment>
         <div className={`navigation ${sticky? "sticky" : ""}`}>
         <div className="nav-container container">
-            <Link  to="/">
+        
+            <Link  className='logo-txt' to="/">
             {/*<img className='logo' src={Logo} alt="Total beauty affairs"/>*/}
+            Logo
             </Link>
             <div className='search-container'>
                

@@ -40,16 +40,16 @@ const Footer = () => {
                     <FontAwesomeIcon className='whatsapp' icon={faWhatsapp} size="2x"  />
                     </div>
                     </div>
-                    <p className='copyright'>Copyright &copy; 2023 by CoralClouds, Inc. All rights reserved.</p>
+                    <p className='copyright'>Copyright &copy; 2023 by Rebecca , Inc. All rights reserved.</p>
                 </div>
                 <div>
                     <p className='footer-heading'>Contact us</p>
                     <address className='contacts'>
                     <p className='address'>623 Harrison St., 3rd Floor, San Francisco, CA 94107</p>
                     <p>
-                    <Link className='footer-link' to="tel:234-201-777">234-201-777</Link>
+                    <Link className='footer-link' to="tel:234-201-777">234-906-689-0293</Link>
                     <br />
-                    <Link className='footer-link' to="mailto:shopHere@gmail.com">shopHere@gmail.com</Link>
+                    <Link className='footer-link' to="mailto:makindeoluwafunmilayo038@gmail.com">myMail@gmail.com</Link>
                     </p>
                     </address>
                     

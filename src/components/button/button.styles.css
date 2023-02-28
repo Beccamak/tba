@@ -6,26 +6,30 @@
     border: none;
     padding: 1.2rem 2rem;
     min-width: 12rem;
-    /* width: 100%; */
-    text-transform:uppercase;
+     width: 100%;
+    text-transform:capitalize;
+    font-size: 1.8rem;
+    font-weight: 600;
     cursor: pointer;
-    
+    font-family: nunito, sans-serif;
     text-align: center;
-    letter-spacing: .2rem;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     line-height: normal;
-    border-radius: 6px;
+    border-radius: 2rem;
     /* transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); */
-    transition: color .45s linear, background-color .45s linear;
-    /* box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); */
+   /* transition: color .45s linear, background-color .45s linear;
+     box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); */
     
 
 }
 
 .fill:hover{
-    font-weight: 700;
-    font-size: 1.4rem;
+border: 2px solid #F5B216;
+color: #F5B216;
+background: none;
+font-weight: 700;
+box-sizing: border-box;
     
 }
 .outline{
@@ -35,8 +39,8 @@
     line-height: normal;
     padding: 1.2rem 2rem;
     min-width: 12rem;
-    /* width: 100%; */
-    text-transform:uppercase;
+     width: 100%; 
+    text-transform:capitalize;
     cursor: pointer;
     
     text-align: center;
@@ -62,22 +66,29 @@
     padding: 1.2rem 2rem;
     min-width: 12rem;
     /* width: 100%; */
-    text-transform:uppercase;
+    font-size:1.8rem ;
+    font-family: nunito, sans-serif;
+    text-transform:capitalize;
     cursor: pointer;
     
     text-align: center;
-    letter-spacing: .2rem;
-    font-weight: 400;
+ 
+    font-weight: 600;
     font-style: normal;
     line-height: normal;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-        /* transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); */
-        transition: color .45s linear, background-color .45s linear;
+      /*    transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); 
+       transition: color .45s linear, background-color .45s linear;*/
 }
 
 .footer-btn:hover{
        font-weight: 700;
+       border: 2px solid #F5B216;
+       color: #F5B216;
+       background: none;
+       
+
     
     
 }

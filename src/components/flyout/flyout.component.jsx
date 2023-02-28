@@ -17,6 +17,7 @@ import {ReactComponent as Home} from '../../assets/categories/lamp.svg';
 import {ReactComponent as Phones} from '../../assets/categories/device-mobile.svg';
 import {ReactComponent as Sport} from '../../assets/categories/soccer-ball.svg';
 import {ReactComponent as Supermarket} from '../../assets/categories/storefront.svg';
+import CATEGORIES from '../../categories';
 
 
 const Flyout = () => {
@@ -25,7 +26,8 @@ const Flyout = () => {
     const[style, setStyle] = useState({});
     const {setFlyout} = useContext(DisplayDetails);
     const currentCategory = useSelector(selectCurrentCategory);
-   const categories = useSelector(selectCategories)
+   const categories = CATEGORIES;
+   console.log(categories);
     const dispatch = useDispatch();
     const icons = [
         <AutomobileIcon className="icon main-icon"/>,

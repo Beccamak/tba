@@ -1,5 +1,11 @@
 import { faArrowRight, faArrowsLeftRightToLine , faCartShopping, faCreditCard, faFaceSmileBeam, faTruck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {ReactComponent  as Line} from '../../assets/svgs/CORALCLOUDS (1)/Line 26.svg';
+import {ReactComponent  as ArrowLeftRightToLine} from '../../assets/svgs/CORALCLOUDS (1)/Group.svg';
+import {ReactComponent  as Cart} from '../../assets/svgs/CORALCLOUDS (1)/Group-1.svg';
+import {ReactComponent  as Truck} from '../../assets/svgs/CORALCLOUDS (1)/mdi_truck-delivery-outline.svg';
+import {ReactComponent  as Card} from '../../assets/svgs/CORALCLOUDS (1)/fluent_payment-24-regular.svg';
+import {ReactComponent  as Happy} from '../../assets/svgs/CORALCLOUDS (1)/bx_happy-heart-eyes.svg';
 import './mid-section.styles.css';
 
 
@@ -8,27 +14,27 @@ const MidSection = () => {
         <section className='mid-section'>
         <div className='mid-items container'>
         <div className='mid-item'>
-        <FontAwesomeIcon size='3x' className='mid-icon' icon={faArrowsLeftRightToLine} />
+        <ArrowLeftRightToLine  className='mid-icon'  />
         <p className='item'>Choose item(s)</p>
         </div>
-        <FontAwesomeIcon size='2x' className='mid-icon down' icon={faArrowRight} />
+        <Line  className='down'  />
         <div className='mid-item'>
-        <FontAwesomeIcon size='3x' className='mid-icon' icon={faCartShopping} />
+        <Cart  className='mid-icon'  />
         <p className='item'>Add to cart</p>
         </div>
-        <FontAwesomeIcon size='2x' className='mid-icon down' icon={faArrowRight} />
+        <Line  className='down'  />
         <div className='mid-item'>
-        <FontAwesomeIcon size='3x' className='mid-icon' icon={faCreditCard} />
+        <Card  className='mid-icon'  />
         <p className='item'>Make payment</p>
         </div>
-        <FontAwesomeIcon size='2x' className='mid-icon down' icon={faArrowRight} />
+        <Line  className='down'  />
         <div className='mid-item'>
-        <FontAwesomeIcon size='3x' className='mid-icon' icon={faTruck} />
+        <Truck  className='mid-icon'  />
         <p className='item'>Get your item delivered</p>
         </div>
-        <FontAwesomeIcon size='2x' className='mid-icon down' icon={faArrowRight} />
+        <Line  className='down'  />
         <div className='mid-item'>
-        <FontAwesomeIcon size='3x' className='mid-icon' icon={faFaceSmileBeam} />
+        <Happy className='mid-icon'  />
         <p className='item'>Be a happy customer</p>
         </div>
         </div>

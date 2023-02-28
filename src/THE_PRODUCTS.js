@@ -9,7 +9,8 @@ const products = [
     "imgUrl": "https://i.ibb.co/59Fmt1D/Huda-Beauty-launches-new-lip-balm-treatment-Silk-Balm-for-your-best-looking-lips-yet-removebg-previe.png",
       "mainCategory": "Beauty",
       "subCategory": "make up",
-      "category": "lip gloss",
+      "category": "Lip gloss",
+      topCategory: true,
       "sku": "21Y7FG08",
         "description": "THe tv is so good that upu can use for the production of a movie in your house oh yeah! yoh read that right",
         "features": [

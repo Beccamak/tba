@@ -3,6 +3,7 @@
     margin-bottom: 4.8rem;
     position: relative;
     box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.075);
+    padding: 1rem 0;
     /* height: 70px; */
 }
 .nav-container{  
@@ -24,6 +25,12 @@
     height: 100%;
     width: 100%;
 
+}
+.logo-txt{
+    font-size: 4.8rem;
+}
+.logo-txt:hover{
+    font-weight: 700;
 }
 .nav-links{
     font-size: 1.8rem;
@@ -80,8 +87,8 @@
     width: 100%;
     outline: none;
     border: none;
-    border: 1px solid #000000;
-    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius:2rem;
     
   
 
@@ -112,8 +119,8 @@
     color: #131415;
 }
 .search{
-        font-size: 1.4rem;
-        opacity: 0.55;
+        font-size: 1.8rem;
+        opacity: 0.2;
         width: 100%;
        
     

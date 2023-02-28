@@ -21,7 +21,7 @@ const AllProducts = () => {
         <div>
         <ProductsPage productsDetails={{
             children: "All Products",
-            headerType: "noLinkHeader",
+            headerType: "pageHeader",
             route: "products-found", 
             products:searchResultProducts
         }}/>

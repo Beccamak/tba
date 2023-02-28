@@ -7,7 +7,7 @@ import { selectCartItems } from '../../store/cart reducer/cart.selector';
 
 
 const CartItem = ({cartItem}) => {
-    const {imgUrl, price, name, quantity, flashSale, discount  } = cartItem;
+    const {imgUrl, price, name, quantity,inventory, flashSale, discount  } = cartItem;
     const cartItems = useSelector(selectCartItems);
     const dispatch = useDispatch();
 
@@ -33,7 +33,7 @@ const CartItem = ({cartItem}) => {
             <div className='itm-minus'>
             <FontAwesomeIcon  icon={faMinus} onClick={onMinusClickHandler} />
             </div>
-            <span className='itm-qtn'>{quantity}</span>
+            <span className='itm-qtn'>{inventory}</span>
             <div className='itm-plus' >
             <FontAwesomeIcon icon={faPlus} onClick={onPlusClickHandler}/>
             </div>

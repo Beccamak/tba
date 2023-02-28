@@ -22,7 +22,10 @@
 }
 
 .mid-icon{
-    color: #F5B216;
+  
+    width: 3.2rem;
+    height: 3.2rem;
+
 }
 .item{
     font-size: 1.6rem;
