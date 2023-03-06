@@ -18,6 +18,8 @@ import AccountDropdown from "../../components/account dropdown/account.dropdown.
 import { setIsAccountOpen } from '../../store/userReducer/user.action';
 import { setIsDropdownOpen } from '../../store/products reducer/products.action';
 import Dropdown from '../../components/dropdown/dropdown.component';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBaby, faBars, faHamburger } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -70,15 +72,18 @@ const Navigation = () => {
         <Fragment>
         <div className={`navigation ${sticky? "sticky" : ""}`}>
         <div className="nav-container container">
+        <div className='bar-logo'>
+        <FontAwesomeIcon icon={faBars} className='bar' size='4x' />
         
-            <Link  className='logo-txt' to="/">
-            {/*<img className='logo' src={Logo} alt="Total beauty affairs"/>*/}
-            Logo
-            </Link>
+        <Link   to="/">
+        <img className='logo' src={Logo} alt="Total beauty affairs"/>
+      
+        </Link>
+        </div>
             <div className='search-container'>
                
 
-            <input className='input-search' type="text" placeholder='Search products, categories and brands' value={searchString} onChange={onSearchChangeHandler}/>
+            <input className='input-search' type="text" placeholder='Search products or categories' value={searchString} onChange={onSearchChangeHandler}/>
             <svg xmlns="http://www.w3.org/2000/svg" className="search-icon nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
@@ -100,9 +105,7 @@ const Navigation = () => {
     </span> */}
             <Link className='nav-link'  to="/">
                 <div className='nav-link-details'>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
+                   
                     <span>Services</span>
             </div>
             </Link> 
@@ -123,9 +126,7 @@ const Navigation = () => {
                 currentUser ? ''
                 :   <Link className='nav-link' to="/sign-up">
           <div className='nav-link-details'>
-          <svg xmlns="http://www.w3.org/2000/svg" className="nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+         
           <span>Sign Up</span>
           </div>
       </Link>
@@ -137,17 +138,13 @@ const Navigation = () => {
                 <Link className='nav-link'  to="/account">
                  <div  className='nav-link-details'>
                  <span className='home-name'>My Account</span>
-                {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="bar-icon w-6 h-6">
-                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-            </svg>*/}
+               
                  </div>
                  </Link> 
                 : 
                 <Link className='nav-link' to="/sign-in">
                 <div className='nav-link-details'>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-                    </svg>
+                   
                     <span>Login</span>
                 </div>
             </Link> 

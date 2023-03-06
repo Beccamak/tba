@@ -6,12 +6,12 @@
    
 }
 
-.sp-timer,.see-more{
+.sp-timer{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    font-family: rubik, sans-serif;
+    font-family: nunito, sans-serif;
     font-weight: 600;
     line-height: 3.2rem;
     font-size: 2.4rem;

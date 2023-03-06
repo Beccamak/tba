@@ -8,15 +8,18 @@
     }
 .top-categories-container{
     display: grid;
-    column-gap: 5.6rem;
+    column-gap: 4.8rem;
     row-gap: 6.4rem;
-    grid-template-columns: repeat(4, 25rem);
-    padding: 0 9rem 0.5rem 9rem;
+    /* grid-template-columns: repeat(4, 25rem); */
+    grid-template-columns: repeat(4, 1fr);
+   
     /* margin-bottom: 4.8rem; */
     /* margin: 0 9rem 4.8rem 9rem; */
-    margin-top: 5.6rem;
-    margin-bottom: 8.4rem;
-    width: 100%;
+    /* margin-top: 5.6rem;
+    margin: 5.6rem 9rem 8.4rem 9rem; */
+    /* width: 100%; */
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -34,7 +37,7 @@
 .cat-pic-con{
     height: 22rem;
     margin-bottom: 2.4rem;
-    background-color: rgba(245, 178, 22, 0.2);
+    background-color:  rgba(183, 30, 121, 0.2);
     border-radius: 1rem;
     display: flex;
     align-items: center;

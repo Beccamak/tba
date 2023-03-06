@@ -13,6 +13,7 @@ const FlashSales = () => {
     return(
         <div className='flash'>
         <div className= {`products-header-container`}>
+        <div className='container ph-sub'>
         <div className='sp-timer'>
         <span>Today's Promo Sale</span>
         <Timer />
@@ -20,6 +21,7 @@ const FlashSales = () => {
         <div className='see-more'>
         <Link to="/flash">See More</Link>
         <FontAwesomeIcon  icon={faAngleRight} />
+        </div>
         </div>
         
     </div>

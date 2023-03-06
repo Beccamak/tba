@@ -53,6 +53,7 @@ const App = () => {
   // return isLoading ? (
   //   <Spinner spinner="big"/>
   // ) : 
+  console.log(process.env.NODE_ENV);
   return(
     <div>
       <AnimatePresence>

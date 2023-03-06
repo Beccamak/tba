@@ -21,7 +21,7 @@ const TopCategories = () => {
         <div className='top-categories'>
         <ProductsHeader children='Hot Collections' headerType="linkHeader" route="/shop-tc"/>
 
-        <div className='top-categories-container'>
+        <div className='top-categories-container container'>
             <div className='top-category'>
             <div className='cat-pic-con' onClick={() => {onTopCategoryHandler("Lip gloss")}} >
             <img className='cat-pic'  src={Cream} alt='Beauty Category'/>

@@ -22,7 +22,7 @@ const Footer = () => {
         <p className='subscribe'>Subscribe to our newsletter to get updates on our latest offers!</p>
         </div>
         <div  className='sub-con'>
-        <input  classNAme="eml" type="email" placeholder="Enter your email address" required />
+        <input  className="footer-email" type="email" placeholder="Enter your email address" required />
         <Button children="Subscribe" buttonType="footer" />
         </div>
         </div>
@@ -40,16 +40,16 @@ const Footer = () => {
                     <FontAwesomeIcon className='whatsapp' icon={faWhatsapp} size="2x"  />
                     </div>
                     </div>
-                    <p className='copyright'>Copyright &copy; 2023 by Rebecca , Inc. All rights reserved.</p>
+                    <p className='copyright'>Copyright &copy; 2023 by Coralclouds , Inc. All rights reserved.</p>
                 </div>
                 <div>
                     <p className='footer-heading'>Contact us</p>
                     <address className='contacts'>
                     <p className='address'>623 Harrison St., 3rd Floor, San Francisco, CA 94107</p>
                     <p>
-                    <Link className='footer-link' to="tel:234-201-777">234-906-689-0293</Link>
+                    <Link className='footer-link' to="tel:234-201-777">44-789-8988</Link>
                     <br />
-                    <Link className='footer-link' to="mailto:makindeoluwafunmilayo038@gmail.com">myMail@gmail.com</Link>
+                    <Link className='footer-link' to="mailto:coming@gmail.com">Send us a mail</Link>
                     </p>
                     </address>
                     

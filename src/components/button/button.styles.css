@@ -1,94 +1,88 @@
-
-.fill{
-    line-height: normal;
-    background: none;
-    background-color: #F5B216;
-    border: none;
-    padding: 1.2rem 2rem;
-    min-width: 12rem;
-     width: 100%;
-    text-transform:capitalize;
-    font-size: 1.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    font-family: nunito, sans-serif;
-    text-align: center;
-    font-weight: 600;
-    font-style: normal;
-    line-height: normal;
-    border-radius: 2rem;
-    /* transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); */
-   /* transition: color .45s linear, background-color .45s linear;
+.fill {
+  line-height: normal;
+  background: none;
+  background-color: #b71e79;
+  border: none;
+  padding: 1.2rem 2rem;
+  min-width: 12rem;
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: nunito, sans-serif;
+  text-align: center;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  /* transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); */
+  /* transition: color .45s linear, background-color .45s linear;
      box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); */
-    
-
 }
 
-.fill:hover{
-border: 2px solid #F5B216;
-color: #F5B216;
-background: none;
-font-weight: 700;
-box-sizing: border-box;
-    
+.fill:hover {
+  border: 2px solid #b71e79;
+  color: #b71e79;
+  background: none;
+  font-weight: 700;
 }
-.outline{
-    background: none;
-    border: 1px solid #F5B216;
-    color: #F5B216;
-    line-height: normal;
-    padding: 1.2rem 2rem;
-    min-width: 12rem;
-     width: 100%; 
-    text-transform:capitalize;
-    cursor: pointer;
-    
-    text-align: center;
-    letter-spacing: .2rem;
-    font-weight: 400;
-    font-style: normal;
-    border-radius: 6px;
-    /* transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); */
-    transition: color .45s linear, background-color .45s linear;
-}
-.outline:hover{
-    background-color: #F5B216;
-    color: #131415;
-    border: none;
+.outline {
+  background: none;
+  border: 1px solid #b71e79;
+  color: #b71e79;
+  line-height: normal;
+  padding: 1.2rem 2rem;
+  min-width: 12rem;
+  width: 100%;
+  text-transform: capitalize;
+  cursor: pointer;
 
+  text-align: center;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 6px;
+  color: #FFFFFF;
+  /* transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); */
+  transition: color 0.45s linear, background-color 0.45s linear;
+}
+.outline:hover {
+  background-color: #b71e79;
+  color: #b71e79;
+  border: none;
 }
 
-.footer-btn{
-    line-height: normal;
-    background: none;
-    background-color: #F5B216;
-    border: none;
-    padding: 1.2rem 2rem;
-    min-width: 12rem;
-    /* width: 100%; */
-    font-size:1.8rem ;
-    font-family: nunito, sans-serif;
-    text-transform:capitalize;
-    cursor: pointer;
-    
-    text-align: center;
- 
-    font-weight: 600;
-    font-style: normal;
-    line-height: normal;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-      /*    transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); 
+.footer-btn {
+  line-height: normal;
+  background: none;
+  background-color: #b71e79;
+  color: #FFFFFF;
+  border: none;
+  padding: 1.2rem 2rem;
+  min-width: 12rem;
+  /* width: 100%; */
+  font-size: 1.8rem;
+  font-family: nunito, sans-serif;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  text-align: center;
+
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  /*    transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); 
        transition: color .45s linear, background-color .45s linear;*/
 }
 
-.footer-btn:hover{
-       font-weight: 700;
-       border: 2px solid #F5B216;
-       color: #F5B216;
-       background: none;
-       
-
-    
-    
+.footer-btn:hover {
+  font-weight: 700;
+  border: 2px solid #b71e79;
+  color: #b71e79;
+  background: none;
 }

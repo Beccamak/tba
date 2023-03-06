@@ -178,11 +178,11 @@ const SignUpForm = () =>{
     </div>
     <div className='btn-group'>
     {(signUpState && actionIsLoading)? <Spinner />: <Button buttonType="filled" children="Sign up" onClickHandler={onSignUpClickHandler} />}
-    
+    {/* 
     <div className='line'></div>
     {(signUpWithGoogleState && actionIsLoading)?  <Spinner />: <Button buttonType="filled" children="Sign up with Google" onClickHandler={signUpOrInWithGoogle} />}
 
-    
+    */}
     </div>
     </form> 
     </div>

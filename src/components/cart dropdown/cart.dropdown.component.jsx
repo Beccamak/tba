@@ -9,9 +9,8 @@ import {
 import { useSelector } from "react-redux";
 import CartItem from "../cart-item/cart.item.component";
 import FlashSales from "../flash sales/flash.sales.component";
-import { useLocation } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRecycle } from "@fortawesome/free-solid-svg-icons";
+import { useLocation} from "react-router-dom";
+import { ReactComponent as Delete } from "../../assets/svgs/delete.svg"
 
 
 const CartDropdown = () => {
@@ -23,11 +22,12 @@ const CartDropdown = () => {
   const checkOutHandler = () => navigate("/checkout");
   const onShopNowHandler = () => navigate("/");
   const location = useLocation();
-console.log(location, "cart");
+ 
+console.log(location, "loction");
 
 
   return (
-    <div classNamme="cart-dropdown">
+    <div className="cart-dropdown">
       {cartCount ? (
         <div className="container">
           <p className="shopping-cart">Shopping cart</p>
@@ -47,12 +47,12 @@ console.log(location, "cart");
                 </div>
 
                 {cartItems.map((item) => (
-                  <CartItem cartItem={item} />
+                  <CartItem cartItem={item} key={item.id} itemType='cart' />
                 ))}
               </div>
 
               <p className="clear">
-              <FontAwesomeIcon icon={faRecycle} />
+              <Delete />
               <span>Clear Cart</span>
               </p>
             </div>
@@ -99,7 +99,9 @@ console.log(location, "cart");
           <p className="cart-sub-text">
             You have not added any item to your cart
           </p>
+          <div className="btn-shop-now">
           <Button children="Shop Now" buttonType="filled" onClickHandler={onShopNowHandler} />
+          </div>
         </div>
       )}
 

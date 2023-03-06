@@ -111,9 +111,9 @@ const Flyout = () => {
                   {
                     categories.map((categoryObject, index) => {
                      return <Fragment>
-                     <div className="main">
+                     <div className="main" >
                      {icons[index]}
-                     <Link  to='/' className='main-cat' onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>{categoryObject.MainCategory}</Link>
+                     <Link  to='/' className='main-cat'onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>{categoryObject.MainCategory}</Link>
                      </div>
                             <div className='cat-collections' onMouseEnter={categoryHoverMouseEnterHandler} onMouseLeave={categoryHoverMouseLeaveHandler}  style={style} >
                             

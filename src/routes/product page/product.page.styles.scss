@@ -1,8 +1,6 @@
-
 .product-page {
   display: flex;
   gap: 1.2rem;
-
 }
 
 .product-page-container {
@@ -15,14 +13,13 @@
 .product-info {
   width: 50%;
 }
-.ppg-img-con{
+.ppg-img-con {
   width: 50%;
   height: 40rem;
   background-size: contain;
-  
 }
 .product-img {
-  width: 100%; 
+  width: 100%;
   height: 100%;
   object-fit: contain;
   // width: 40rem;
@@ -36,96 +33,86 @@
   transition: color 10000s ease-in-out;
   margin-bottom: 0.4rem;
 }
-.page-price{
-  border-bottom:  1px solid #D9D9D9;
-  border-top:  1px solid #D9D9D9;
+.page-price {
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
 }
 .product-info-price {
   font-size: 3rem;
   padding: 1.2rem 0 0.4rem 0;
   font-weight: 500;
   line-height: 4.6rem;
-
 }
-.price-strike{
+.price-strike {
   text-decoration: line-through;
-  color: #F5B216;
+  color: #b71e79;
   opacity: 0.4;
   font-weight: 400;
   font-size: 3rem;
   line-height: 4.6rem;
   margin-bottom: 1.2rem;
 }
-.in-stock{
+.in-stock {
   font-weight: 500;
   font-size: 1.2rem;
 }
-.page-qtn{
-
+.page-qtn {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.6rem;
 }
-.page-quantity{
+.page-quantity {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin: 3.4rem 0 6.4rem 0;
-  .pg-itm-minus, .pg-itm-plus{
-      font-weight: 500;
-      // font-size: 1.4rem;
-      line-height: 2rem;
-      background-color:  #D9D9D9;
-      width: 3.2rem;
-      cursor: pointer;
-      height: 2.1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid #F5B216;
-      color: #000000;
-     
-      
-      
+  .pg-itm-minus,
+  .pg-itm-plus {
+    font-weight: 500;
+    // font-size: 1.4rem;
+    line-height: 2rem;
+    background-color: #d9d9d9;
+    width: 3.2rem;
+    cursor: pointer;
+    height: 2.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #b71e79;
+    color: #000000;
   }
-  .pg-itm-minus{
+  .pg-itm-minus {
     margin-left: 1rem;
   }
-  .pg-itm-qtn{
-      font-size: 1.4rem;
-      background: #FFFFFF;
-      padding: 0.1rem 2.2rem;
-      height: 2.1remwww;
-      font-weight: 500;
-      color: #000000;
-      border-top: 1px solid #F5B216;
-      border-bottom: 1px solid #F5B216;
-
-
-
+  .pg-itm-qtn {
+    font-size: 1.4rem;
+    background: #ffffff;
+    padding: 0.1rem 2.2rem;
+    height: 2.1remwww;
+    font-weight: 500;
+    color: #000000;
+    border-top: 1px solid #b71e79;
+    border-bottom: 1px solid #b71e79;
   }
 }
-.star{
+.star {
   width: 1.8rem;
   height: 1.8rem;
-  fill: #F5B216;
+  fill: #b71e79;
   stroke: none;
 }
-.ratings{
+.ratings {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
   // gap: 1.4rem;
-
 }
-.colors{
+.colors {
   display: flex;
   gap: 1.2rem;
   margin-bottom: 1.4rem;
-  
-  
 }
-.color{
+.color {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -139,66 +126,61 @@
   gap: 1.2rem;
 }
 
-.add-left, .add-right{
+.add-left,
+.add-right {
   width: 50%;
 }
-.brand-name{
+.brand-name {
   font-size: 1.4rem;
   margin-bottom: 0.4rem;
 }
-.sku{
+.sku {
   font-size: 1.2rem;
-  margin-bottom:3.6rem;
+  margin-bottom: 3.6rem;
 }
-.description{
+.description {
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
 }
-.product-mid{
+.product-mid {
   margin: 4.6rem 0;
   padding: 3.2rem 4.2rem;
   font-size: 1.8rem;
   font-weight: 500;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
-.product-down{
-  background-color: #FFFFFF;
+.product-down {
+  background-color: #ffffff;
 
+  .down-details {
+    display: flex;
+    gap: 3.2rem;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    padding: 2.4rem;
+    border-bottom: 1px solid #ededeb;
+  }
 
-
-.down-details{
-  display: flex;
-  gap: 3.2rem;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 2.4rem;
-  padding: 2.4rem;
-  border-bottom: 1px solid #EDEDEB;
+  .down-details p:hover {
+    font-weight: 700;
+    color: #b71e79;
+  }
+  .details-itm {
+    cursor: pointer;
+  }
 }
-
-
-.down-details p:hover{
+.active-header {
+  color: #b71e79;
   font-weight: 700;
-  color: #F5B216;
-  
 }
-.details-itm{
-  cursor: pointer;
-}
-
-}
-.active-header{
-  color: #F5B216;
-  font-weight: 700;
-
-}
-.details-box{
+.details-box {
   min-height: 36rem;
   font-weight: 500;
-font-size: 1.6rem;
-line-height: 2.4rem;
-padding: 2.4rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding: 2.4rem;
 }
-.details-box ul{
+.details-box ul {
   margin: 2.4rem;
 }

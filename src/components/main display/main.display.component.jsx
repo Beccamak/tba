@@ -11,7 +11,7 @@ const MainDisplay = () => {
     return(
          <div className='display-cards container'>  
            <Flyout />
-           {!flyout? <Slider sliderType="big"/> :<Slider sliderType="small"/>}
+           {!flyout? <Slider/> :'' }
            </div>
            )
           }

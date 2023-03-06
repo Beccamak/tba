@@ -1,31 +1,21 @@
 import './slider.styles.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
-import Cloth from "../../assets/images/banner-img-1.png";
-import Beauty from "../../assets/images/banner-img-2.png";
-import Watch from "../../assets/images/banner-img-3.png";
-import Shoe from ".././../assets/images/banner-img-4.png";
-import Tablet from "../../assets/images/banner-img-5.png";
+import Hed from '../../assets/images/hed.jpg';
 
 
 const Slider = ({sliderType}) => {
     const [slideIndex, setSlideIndex] = useState(1);
     const imgs = [
-            Cloth,
-           Beauty,
-           Watch,
-           Shoe,
-           Tablet
+            Hed,
+            Hed,
+            Hed,
+            Hed,
+            Hed
 
     ]
-const text =[
-        "Fashion heaven awaits you!",
-        "Beauty shopping paradise here!",
-        "Timepiece treasure trove here!",
-        "Step into shoe heaven here!",
-        "Tech shopping bliss here!"
-]
+
  useEffect(() => {
     const intervalId = setInterval(() => {
         if(slideIndex !== imgs.length){
@@ -63,19 +53,20 @@ const clickDot = (index) => {
 }
     return(
         <div className={`carousel-slider ${sliderType}`}>
+          
                 {
                         imgs.map((img, index) =>{
                                 return <div className={` ${slideIndex === index + 1 ? "slide active-slide" : "slide"}`}>
                                 <div className='banner-img'>
                                 <img  className='slide-img' src={img} />
-                                <p className='banner-txt'>{text[index]}</p>
+                               
                                 </div>
                                 </div>
                         } )
                 }
                
-                <FontAwesomeIcon icon={faArrowLeft} className="btn-slide prev"  onClick={prevSlide}/>
-                <FontAwesomeIcon icon={faArrowRight} className="btn-slide next" onClick={nextSlide} />
+                <FontAwesomeIcon icon={faAngleLeft} className="btn-slide prev"  onClick={prevSlide}/>
+                <FontAwesomeIcon icon={faAngleRight} className="btn-slide next" onClick={nextSlide} />
 
                
                 <div className='dots-container'>
@@ -90,4 +81,15 @@ const clickDot = (index) => {
 }
 
 
-export default Slider;
+ export default Slider;     
+// {
+//                         imgs.map((img, index) =>{
+//                                 return <div style={{backgroundImage:`url('${img}')`}}   className={` ${slideIndex === index + 1 ? "slide active-slide" : "slide"}`}>
+//                                 <div className='banner-img'>
+                               
+                                
+                                
+//                                 </div>
+//                                 </div>
+//                         } )
+//                 }

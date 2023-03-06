@@ -1,14 +1,18 @@
 .products-header-container{
     font-size: 1.8rem;
     line-height: 1.6;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2.4rem 9rem;
-    margin-bottom: 2.8rem;
+    padding: 2.4rem 0;
+   
+    margin-bottom: 2.8rem; 
     border-bottom: 1px solid #EDEDEB;
     color: #000000;
     
+    
+}
+.ph-sub{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
 }
 .pd-reduce{

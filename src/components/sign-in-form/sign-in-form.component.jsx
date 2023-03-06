@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import Button from '../button/button.component';
 import { ToastContainer, toast } from 'react-toastify';
+import {node_env} from '../../env';
 
 const defaultFormFields = {
     email: "",
@@ -26,7 +27,7 @@ const SignInForm = () =>{
     const navigate = useNavigate();
     const [loginState, setLoginState] = useState('false');
     const [loginWithGoogleState, setLoginWithGoogleState] = useState('false');
-
+    const url = node_env === "development"? "http://localhost:5000":"https://total-beauty-affairs-backend.onrender.com" 
 
     const onSuccessfulSignIn = () => navigate("/")
 
@@ -77,7 +78,7 @@ const SignInForm = () =>{
         dispatch(userSignInUpStart());
 
         try {
-           await Axios.post("https://total-beauty-affairs-backend.onrender.com/auth/login",{
+           await Axios.post(`${url}/auth/login`,{
             email: email,
             password: password
            } ).then(res=> {
@@ -94,12 +95,15 @@ const SignInForm = () =>{
                 
             }
 
-                console.log(res);
+                
                 const user = res.data.user; 
                 if(user){
-                setLoginState(false);
-                dispatch(userSignInUpSuccess(user)); 
+                setLoginState(false); 
                 loginSuccess("Login sucess");
+                dispatch(userSignInUpSuccess(user)); 
+                console.log('sbvhjjjjjj');
+               
+
                 resetFormFields();
                 onSuccessfulSignIn(); 
                 
@@ -127,7 +131,8 @@ const SignInForm = () =>{
         <header className='sign-in-title'>Login</header>
             <form onSubmit={handleSubmit}>
             <div className='label-input'>
-            <input className='form-input' type="text" name="email" value={email}  placeholder='Email' onChange={handleChange} required/>
+            {/*<span className='placeholder' >First Name</span>*/}
+            <input className='form-input' type="email" name="email" value={email} placeholder='Email' onChange={handleChange} required/>
             </div>
             <div className='label-input'>
              <input className='form-input' type="password" name="password" value={password} placeholder='Password' onChange={handleChange} required/>
@@ -141,15 +146,16 @@ const SignInForm = () =>{
             </div>
             <div className='btn-group'>
             {(loginState===true && actionIsLoading===true)? <Spinner />: <Button children="Log in" buttonType="filled" />}
-            <div className='line'></div>
+            {/*<div className='line'></div>*/}
            
             </div>
             
             </form> 
+            {/*
              {
                 
             (loginWithGoogleState===true && actionIsLoading===true)? <Spinner />: <Button children="Log in" buttonType="filled" />}
-          
+             */}
             <ToastContainer /> 
             
         </div>

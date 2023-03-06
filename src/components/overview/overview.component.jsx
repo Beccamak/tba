@@ -4,14 +4,14 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart, faSave, faList, faEye} from '@fortawesome/free-solid-svg-icons';
 
 
-const Overview = ({name, email}) => {
+const Overview = ({firstName, lastName, email}) => {
     return(
         <div className='overview'>
         <div className="overview-up">
         
         <div className='welcome'>
         <h2>MY WALLET</h2>
-        <h2>Hi, {name? name: "user"}</h2>
+        <h2>Hi, {firstName} {lastName}</h2>
         </div>
         <div className='wallet'>
         <p className='wallet-amt'>$230.00</p>
@@ -25,8 +25,8 @@ const Overview = ({name, email}) => {
         <div className='profile-img-con'></div>
         <img src='' className='profile-image' />
         <div className='profile-details'>
-        <p className='profile-name'>{name? name: "Rebecca John"}</p>
-        <p>{email? email : "funmitof@gmail.com"}</p>
+        <p className='profile-name'>{firstName} {lastName}</p>
+        <p>{email}</p>
         <p>09066890293</p>
         </div>
         </div>
@@ -56,8 +56,8 @@ const Overview = ({name, email}) => {
         <p className='shipping'>shippind address</p>
         <p className='normal-txt'>This is your default Address</p>
         <div className='address-details'>
-        <p>{name? name: "Rebecca John"}</p>
-        <p>{email? email : "funmitof@gmail.com"}</p>
+        <p>{firstName}{lastName}</p>
+        <p>{email}</p>
         <p>24, brighlight avenue, </p>
         <p>100222</p>
         </div>

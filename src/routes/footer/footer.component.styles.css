@@ -1,137 +1,139 @@
-.footer{
-    padding: 9.6rem 3.2rem;
-    background-color: #131415;
-    
-    
+.footer {
+  padding: 9.6rem 3.2rem;
+  background-color: #131415;
 }
 
-.footer-items{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-content: space-between;
-    gap: 2.4rem;
+.footer-items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between;
+  gap: 2.4rem;
 }
-.footer-heading{
-    font-size: 1.8rem;
-    font-weight: 500;
-    margin-bottom: 4rem;
-    /* margin-top: 2rem; */
-    color: #ffffff;
-    opacity: 0.7;
-}
-
-.footer-links{
-    display: flex;
-    flex-direction: column;
-    gap: 1.8rem;
-}
-.address, .footer-link, .copyright{
-    font-size: 1.6rem;
-    color: #ffffff;
-    opacity: 0.5;
-    transition: opacity linear .3s;
-}
-.contacts{
-    font-style: normal;
-    font-size: 1.6rem;
-    line-height: 1.6;
-}
-.address{
-    margin-bottom: 2.4rem;
-}
-.copyright{
-    margin-top: auto;
-    font-size: 1.4rem;
-    line-height: 1.6;
-}
-.footer-logo-col{
-    display: flex;
-    flex-direction: column;
-}
-.footer-logo{
-   width: 20rem;
-   /* height: 6.8rem; */
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+  /* margin-top: 2rem; */
+  color: #ffffff;
+  opacity: 0.7;
 }
 
-.footer-up{
-    display: flex;
-    justify-content: space-between;
-    padding: 2.4rem 3.2rem;
-    background-color: #1E1E1E;
-    margin-top: 4.8rem;
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.address,
+.footer-link,
+.copyright {
+  font-size: 1.6rem;
+  color: #ffffff;
+  opacity: 0.5;
+  transition: opacity linear 0.3s;
+}
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.address {
+  margin-bottom: 2.4rem;
+}
+.copyright {
+  margin-top: auto;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+.footer-logo-col {
+  display: flex;
+  flex-direction: column;
+}
+.footer-logo {
+  width: 20rem;
+  /* height: 6.8rem; */
 }
 
-.total, .beauty, .affairs{
-    font-size: 2.4rem;
-    color: #ffffff;
-    font-family: pacifico, cursive;
+.footer-up {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.4rem 3.2rem;
+  background-color: #1e1e1e;
+  margin-top: 4.8rem;
 }
-.total{
-    color: #F5B216;
-}
-.affairs{
-    color: #F5B216;
-}
-.updates{
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 2;
-    color: #ffffff;
-    font-weight: 800;
-    font-size: 2rem;
-    line-height: 2.8rem;
-}
-.sub-con{
-    display: flex;
-    width: 40%;
-}
-.sub-con input[type="email"]{
-    padding: 1.4rem;
-    display: flex;
-    align-items: center;
-    width: 80%;
-    outline: none;
-    border: none;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-   
-}
-input[type="email"]::placeholder{
-    color: #131415;
-    opacity: 0.5;
-}
-.subscribe{
-    color: #ffffff;
-}
-.connect{
-    font-size: 1.8rem;
-    color: #ffffff;
-    opacity: 0.7;
 
+.total,
+.beauty,
+.affairs {
+  font-size: 2.4rem;
+  color: #ffffff;
+  font-family: pacifico, cursive;
 }
-.footer-icons{
-    display: flex;
-    color: #ffffff;
-    
-    gap: 2.4rem;
-    padding: 2.4rem 0;
-   
+.total {
+  color: #b71e79;
 }
-.facebook, .insta, .twitter, .whatsapp{
-    opacity: 0.7;
-    transition: opacity linear .3s;
+.affairs {
+  color: #b71e79;
+}
+.updates {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+.sub-con {
+  display: flex;
+  width: 40%;
+}
+.footer-email {
+  padding: 1.4rem;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  outline: none;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.footer-email::placeholder {
+  color: #131415;
+  opacity: 0.5;
+}
+.subscribe {
+  color: #ffffff;
+}
+.connect {
+  font-size: 1.8rem;
+  color: #ffffff;
+  opacity: 0.7;
+}
+.footer-icons {
+  display: flex;
+  color: #ffffff;
+
+  gap: 2.4rem;
+  padding: 2.4rem 0;
+}
+.facebook,
+.insta,
+.twitter,
+.whatsapp {
+  opacity: 0.7;
+  transition: opacity linear 0.3s;
 }
 .facebook:hover,
 .insta:hover,
 .whatsapp:hover,
-.twitter:hover{
-    cursor: pointer;
-    opacity: 1;
-    
+.twitter:hover {
+  cursor: pointer;
+  opacity: 1;
 }
 
-.address:hover, .footer-link:hover{
-    font-weight: 700;
-    opacity: 1;
+.address:hover,
+.footer-link:hover {
+  font-weight: 700;
+  opacity: 1;
 }

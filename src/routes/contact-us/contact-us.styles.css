@@ -1,55 +1,54 @@
-.contact-us{
-    background-color: #F5B216;
-    /* color: #FFFFFF; */
-    text-align: center;
-    padding: 4.8rem 0;
-    font-size:2.4rem;
-    margin-bottom: 9.6rem;
-    font-weight: 600;
+.contact-us {
+  background-color: #b71e79;
+  /* color: #FFFFFF; */
+  text-align: center;
+  padding: 4.8rem 0;
+  font-size: 2.4rem;
+  margin-bottom: 9.6rem;
+  font-weight: 600;
 }
-.kindly{
-    margin-bottom: 3.2rem;
+.kindly {
+  margin-bottom: 3.2rem;
 }
 
-.con-label{
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 3.2;
-    margin-bottom: 9.6rem;
-    
+.con-label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 3.2;
+  margin-bottom: 9.6rem;
 }
 .con-input {
-    padding: 1.2rem 2.8rem;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    outline: none;
-    border: none;
-   border-radius: 4rem;
-   margin-bottom: 4.8rem;
+  padding: 1.2rem 2.8rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 4rem;
+  margin-bottom: 4.8rem;
 }
 
-.text-box{
-    padding: 1.2rem 1.2rem;
-    border-radius: 0.4rem;
-    border: 1px solid #d5d6d9;
-    width: 100%;
-    margin-bottom: 4.8rem;
-    font-size: 1.2rem;
-    height: 25.6rem;
-    line-height: 3.2;
+.text-box {
+  padding: 1.2rem 1.2rem;
+  border-radius: 0.4rem;
+  border: 1px solid #d5d6d9;
+  width: 100%;
+  margin-bottom: 4.8rem;
+  font-size: 1.2rem;
+  height: 25.6rem;
+  line-height: 3.2;
 }
-.contact-header{
-    font-size: 2.4rem;
-    margin-bottom: 1.4rem;
+.contact-header {
+  font-size: 2.4rem;
+  margin-bottom: 1.4rem;
 }
-.kindly{
-    font-size: 1.6rem;
-    line-height: 2.2;
+.kindly {
+  font-size: 1.6rem;
+  line-height: 2.2;
 }
-.submit-btn{
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+.submit-btn {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }

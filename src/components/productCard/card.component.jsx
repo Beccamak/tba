@@ -35,7 +35,7 @@ const ProductCard = ({product, showInventory}) => {
         <Link className="product-card-container" to={`/${link}`}>
         { <div  onMouseEnter={onProductClickHandler}>
         {flashSale && <div className='percent-decrease'>
-             <span className='percentage'>-{discount}%</span>
+             <span className='percentage'>-{discount}% off</span>
          </div>}
              <div className='img-container'>
              <img className="product-image" src={imgUrl} alt={name} />  

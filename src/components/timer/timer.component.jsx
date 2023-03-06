@@ -7,7 +7,7 @@ const Timer = () => {
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
-    const deadline = "31 feb 2023";
+    const deadline = "31 dec 2023";
 
     const getTime = () => {
         const time = Date.parse(deadline) - Date.now();
@@ -30,13 +30,13 @@ const Timer = () => {
             </div>
       */}
             <div>
-              <p className="time">{hours < 10 ? "0" + hours : hours+"h"}:</p>
+              <p className="time">{hours < 10 ? "0" + hours+'h' : hours+"h"}:</p>
             </div>
             <div>
-              <p className="time">{minutes < 10 ? "0" + minutes : minutes+"m"}:</p>
+              <p className="time">{minutes < 10 ? "0" + minutes+'m' : minutes+"m"}:</p>
             </div>
             <div>
-              <p className="time">{seconds < 10 ? "0" + seconds : seconds+"s"}</p>
+              <p className="time">{seconds < 10 ? "0" + seconds+'s' : seconds+"s"}</p>
             </div>
        
         </div>

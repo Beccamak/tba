@@ -9,14 +9,16 @@ const TrendingSale = () => {
     return(
 
         <div className='trending'>
-        <div className="trending-header-container">
+        <div className="products-header-container ">
+            <div className='container ph-sub'>
             <span className='secondary-heading'>Trending Sale</span>
+            </div>
         </div>
 
         
-        <div className='trending-section'>
+        <div className='trending-section container'>
        
-        <div  className='trending-products'>
+        <div  className='trending-products '>
         {
             flashSalesProducts.filter((_, index) => {
                 return index < 5

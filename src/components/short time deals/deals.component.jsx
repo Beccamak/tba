@@ -16,7 +16,7 @@ const ShortDeals = ({children, headerType, route, products}) => {
         productContainerRef.current.scrollLeft += containerWidth;
     }
     return(
-        <div className='deals-section'>
+        <div className='deals-section container'>
        
         <div  ref={productContainerRef} className='deals-products'>
         {
