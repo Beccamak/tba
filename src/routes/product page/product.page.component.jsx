@@ -14,6 +14,7 @@ import Return from "../../components/return policy/return.component";
 import Reviews from "../../components/reviews/reviews.component";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ReactComponent as Cart } from "../../assets/svgs/CORALCLOUDS (1)/Group-1.svg";
 
 const ProductPage = ({ product }) => {
   const cartItems = useSelector(selectCartItems);
@@ -86,7 +87,7 @@ const ProductPage = ({ product }) => {
           <div className="product-info">
             <h2 className="product-info-name">{name}</h2>
             <div className="ratings">
-              <div>
+              <div className="star-review">
                 {Array.from({ length: stars }).map((index) => {
                   return (
                     <svg
@@ -106,8 +107,8 @@ const ProductPage = ({ product }) => {
                   );
                 })}
               </div>
-              <span>{rating} 4.0</span>
-              <span>22 Customer Reviews</span>
+              <span className="rating"> 4.0</span>
+              <span className="review">{rating} Customer Reviews</span>
             </div>
             <p className="brand-name">Brand: {brand}</p>
             <p className="sku">SKU: SKKER-345-TRE</p>
@@ -118,7 +119,7 @@ const ProductPage = ({ product }) => {
                   $ {price - price * (discount / 100)}
                 </p>
                 <p className="price-strike">$ {price}</p>
-                <p>In stock</p>
+                <p className="small-p-text">In stock</p>
               </div>
             ) : (
               <div className="page-price">
@@ -144,7 +145,16 @@ const ProductPage = ({ product }) => {
               <div className="add-left">
                 <Button
                   buttonType="outlined"
-                  children="Add to cart"
+                  children={
+                    <div className="product-add">
+          
+                    <svg xmlns="http://www.w3.org/2000/svg"className='product-cart'  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  
+                    <span>Add to Cart</span>
+                    </div>
+                  }
                   onClickHandler={addProductToCart}
                 />
               </div>

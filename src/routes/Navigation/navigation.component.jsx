@@ -1,5 +1,5 @@
 import './navigation.styles.css';
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { Fragment, useContext, useEffect, useState } from 'react';
 import Logo from "../../assets/logo.png";
 import { UserContext } from '../../contexts/user.context';
@@ -36,6 +36,7 @@ const Navigation = () => {
    const accountHasTransitionedIn = useMountAndUnmountTransition(isAccountOpen, 1000);
    const dropDownHasTransitionedIn = useMountAndUnmountTransition(isDropdownOpen, 1000);
     const [sticky, setSticky] = useState(false);
+    const location = useLocation();
    const onSearchChangeHandler = (event) => {
     const searchStringValue = event.target.value.toLocaleLowerCase();
     dispatch(setSearchString(searchStringValue));
@@ -66,8 +67,7 @@ const Navigation = () => {
         return () => window.removeEventListener('scroll', handleScroll);
 
    })
-   console.log("isDropdownOpen", isDropdownOpen);
- 
+  
     return(
         <Fragment>
         <div className={`navigation ${sticky? "sticky" : ""}`}>
@@ -152,7 +152,9 @@ const Navigation = () => {
              
             </div>
         </div>
+       <div>
        
+       </div>
         
        
         

@@ -9,16 +9,20 @@ import { UserProvider } from './contexts/user.context';
 import { DisplayDetailsProvider } from './contexts/display.details.context';
 import {CategoriesProvider} from './contexts/categories.context.jsx';
 import { Provider } from 'react-redux';
-import {store} from './store/store';
 import { FilterDetailsProvider } from './contexts/filter.details';
 import ScrollTopToDown from './components/scrollTopToDown/scrollTopToDown.component';
 import { Fragment } from 'react';
+import { store, persistor } from './store/store';
+import {PersistGate }from 'redux-persist/integration/react';
+
+
 
 const container = document.getElementById('root');
 const root = createRoot( container );
 root.render(
   <React.StrictMode>
-  <Provider store={store}>
+  <Provider store={store} >
+  <PersistGate loading={null} persistor={persistor}>
   <BrowserRouter>
   
   {/*<UserProvider> remeber their clsoin tags*/}
@@ -31,6 +35,7 @@ root.render(
   </FilterDetailsProvider>
   </DisplayDetailsProvider>
   </BrowserRouter>
+  </PersistGate>
   </Provider>
    </React.StrictMode>
 )

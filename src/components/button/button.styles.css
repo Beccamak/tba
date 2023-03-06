@@ -7,14 +7,14 @@
   min-width: 12rem;
   width: 100%;
   text-transform: capitalize;
-  font-size: 1.8rem;
+  font-size:1.6rem;
   font-weight: 600;
   cursor: pointer;
   font-family: nunito, sans-serif;
   text-align: center;
   font-weight: 600;
   font-style: normal;
-  line-height: normal;
+  line-height: 3.24rem;
   border-radius: 2rem;
   box-sizing: border-box;
   color: #FFFFFF;
@@ -32,26 +32,25 @@
 .outline {
   background: none;
   border: 1px solid #b71e79;
-  color: #b71e79;
   line-height: normal;
   padding: 1.2rem 2rem;
   min-width: 12rem;
   width: 100%;
-  text-transform: capitalize;
   cursor: pointer;
 
   text-align: center;
-  letter-spacing: 0.2rem;
-  font-weight: 400;
-  font-style: normal;
-  border-radius: 6px;
-  color: #FFFFFF;
+  font-family: nunito, sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 3.24rem;
+  border-radius: 2rem;
+  color: #b71e79;
   /* transition: color .45s cubic-bezier(.785,.135,.15,.86),background-color .45s cubic-bezier(.785,.135,.15,.86); */
   transition: color 0.45s linear, background-color 0.45s linear;
 }
 .outline:hover {
   background-color: #b71e79;
-  color: #b71e79;
+  color: #ffffff;
   border: none;
 }
 

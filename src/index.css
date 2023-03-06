@@ -6,13 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  background-color: #EFEDEB;
- 
+  background-color: #efedeb;
+
   /* padding: 20px 40px; */
 }
 
 code {
-  font-family:  source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 /* 
@@ -21,56 +21,54 @@ a {
   color: black;
 } */
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html{
-  font-size: 62.5%
-  
+html {
+  font-size: 62.5%;
 }
-a{
+a {
   text-decoration: none;
-  color: #131415;
+  color: #000000;
   cursor: pointer;
-  
 }
 
 
-.container{
+.container {
   max-width: 130rem;
   padding: 0 3.2rem;
   margin: 0 auto;
-
-}@media (max-width: 59em) {
-  .container{
+}
+@media (max-width: 59em) {
+  .container {
     max-width: 90rem;
     padding: 0 2.4rem;
     margin: 0 auto;
   }
 }
 
-.secondary-heading{
+.secondary-heading {
   font-size: 2.4rem;
-  font-family: rubik, sans-serif;
+  font-family: nunito, sans-serif;
   font-weight: 600;
   line-height: 2.48rem;
 }
-.tertiary-heading{
-  font-family: 'Rubik';
-font-weight: 500;
-font-size: 2rem;
-line-height: 2.48rem;
+.tertiary-heading {
+  font-family: "nunito";
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.48rem;
 }
-.normal-text{
+.normal-text {
   font-size: 1.6rem;
-  font-family: rubik, sans-serif;
+  font-family: nunito, sans-serif;
   font-weight: 400;
   line-height: 2.48rem;
 }
-.see-more{
+.see-more {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,11 +79,11 @@ line-height: 2.48rem;
   font-size: 1.8rem;
 }
 
-.see-more:hover{
+.see-more:hover {
   text-decoration: underline;
 }
 
-.edit-cart{
+.edit-cart {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8rem;
@@ -93,13 +91,13 @@ line-height: 2.48rem;
   color: #9747ff;
   letter-spacing: 0.04rem;
 }
-.p-text{
+.p-text {
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 1.6rem;
 }
-.small-p-text{
+.small-p-text {
   font-weight: 500;
   font-size: 1.2rem;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
 }

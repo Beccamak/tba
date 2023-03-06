@@ -1,7 +1,7 @@
 import { faArrowRight, faArrowsLeftRightToLine , faCartShopping, faCreditCard, faFaceSmileBeam, faTruck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {ReactComponent  as Line} from '../../assets/svgs/CORALCLOUDS (1)/Line 26.svg';
-import {ReactComponent  as ArrowLeftRightToLine} from '../../assets/svgs/CORALCLOUDS (1)/Group.svg';
+import {ReactComponent  as ArrowLeftRightToLine} from '../../assets/svgs/CORALCLOUDS (1)/Vector.svg';
 import {ReactComponent  as Cart} from '../../assets/svgs/CORALCLOUDS (1)/Group-1.svg';
 import {ReactComponent  as Truck} from '../../assets/svgs/CORALCLOUDS (1)/mdi_truck-delivery-outline.svg';
 import {ReactComponent  as Card} from '../../assets/svgs/CORALCLOUDS (1)/fluent_payment-24-regular.svg';

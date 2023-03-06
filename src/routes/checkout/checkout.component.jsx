@@ -28,11 +28,11 @@ const Checkout = () => {
         <span className='edit-cart'>Edit details</span>  
         </div>
          <div className='checkout-card'>
-         <p className='ch-cd cd-nm'>JOHN DOE</p>
+         <p className='ch-cd cd-nm'>John Doe</p>
          <p className='ch-cd cd-em' >John doendii</p>
          <p className='ch-cd cd-add' >ikej ikej l</p>
          <div className='cd-btm'>
-         <span className='ch-pay'>payment detils</span>
+         <span className='ch-pay'>payment details</span>
          <span className='edit-cart'>Edit details</span>
          </div>
          </div>
@@ -117,11 +117,11 @@ const Checkout = () => {
           <span>Total</span>
           <span>{`${cartTotal + 500}`}</span>
         </div>
-        <p className='p-text'>Have a discount code?</p>
+        <p className='p-text' style={{padding:'1.2rem 2.4rem'}}>Have a discount code?</p>
         <div className="cart-btn checkout-btn">
         <Button buttonType="filled" children="buy now" onClickHandler={buyNowHandler} />
         </div>
-        <p className='small-p-text'>Upon clicking 'Place Order', I confirm I have read and acknowledged all terms and policies.</p>
+        <p className='small-p-text' style={{padding:'1.2rem 2.4rem 3.8rem 2.4rem'}}>Upon clicking 'Place Order', I confirm I have read and acknowledged all terms and policies.</p>
       </div>
         <p className='order-txt'>Need help with your order? <Link to='/contact-us'>Contact us</Link></p>
         </div>

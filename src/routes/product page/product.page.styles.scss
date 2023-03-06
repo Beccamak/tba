@@ -36,6 +36,7 @@
 .page-price {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #d9d9d9;
+  padding-bottom: 1.6rem ;
 }
 .product-info-price {
   font-size: 3rem;
@@ -87,8 +88,7 @@
   .pg-itm-qtn {
     font-size: 1.4rem;
     background: #ffffff;
-    padding: 0.1rem 2.2rem;
-    height: 2.1remwww;
+    padding: 0 2.2rem;
     font-weight: 500;
     color: #000000;
     border-top: 1px solid #b71e79;
@@ -128,7 +128,7 @@
 
 .add-left,
 .add-right {
-  width: 50%;
+  width: 23.6rem;
 }
 .brand-name {
   font-size: 1.4rem;
@@ -183,4 +183,33 @@
 }
 .details-box ul {
   margin: 2.4rem;
+}
+.product-add{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.product-cart{
+  width: 2.8rem;
+  height: 2.8rem;
+  color: #b71e79;
+ 
+}
+.product-cart:hover{
+  color: #ffffff;
+ 
+}
+
+.star-review{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.rating{
+  margin-left: 1rem;
+}
+.review{
+  margin-left: 2.4rem;
 }
