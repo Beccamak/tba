@@ -33,3 +33,10 @@
     justify-content: center ;
     
 }
+
+
+@media (max-width: 34em) {
+  .trending-products{
+   grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -69,3 +69,10 @@
 .none{
     transform: translateX(100%);
 }
+
+
+@media (max-width: 34em) {
+    .top-categories-container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

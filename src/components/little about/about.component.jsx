@@ -2,7 +2,7 @@ import './about.styles.css';
 
 const LittleAbout = () => {
     return(
-        <section className='little'>
+        <section className='little container'>
         <p className='tertiary-heading little-heading'>Total Beauty Affairs - Online Shopping in London</p>
         <p className='normal-text'>Total Beauty Affairs is USA's leading online shopping mall. It was launched in June 2014 with the mission of "Enriching Lives for Africa</p>
         <br />

@@ -36,3 +36,24 @@
   /* color: #131415; */
   color: #b71e79;
 }
+
+
+@media (max-width: 34em) {
+  .mid-section{
+    
+  }
+  .mid-items{
+        gap: 1.2rem;
+  }
+  .item{
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .mid-icon{
+    height: 2rem;
+    width: 2rem;
+  }
+  .down{
+    display: none;
+  }
+}
