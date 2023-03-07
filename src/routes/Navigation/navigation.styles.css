@@ -140,9 +140,6 @@ letter-spacing: 0.0075em;
 }
 
 @media (max-width: 59em) {
-  .container {
-    max-width: 90rem;
-  }
   .nav-container {
   }
   .bar {
@@ -158,5 +155,12 @@ letter-spacing: 0.0075em;
     position: absolute;
     right: 2.4rem;
     width: 50%;
+  }
+}
+
+
+@media (max-width: 34em) {
+  .search-container{
+    display: none;
   }
 }

@@ -137,3 +137,15 @@
   font-weight: 700;
   opacity: 1;
 }
+
+
+@media (max-width: 34em) {
+  .footer-items{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  .footer-heading{
+    margin-bottom: 1.4rem;
+  }
+}

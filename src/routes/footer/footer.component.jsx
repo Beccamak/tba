@@ -30,30 +30,7 @@ const Footer = () => {
         <div className='footer'>
 
             <div className='footer-items'>
-                <div  className='footer-logo-col'>
-                    <div className=''>
-                    <p className='connect'>Connect With us</p>
-                    <div className='footer-icons'>
-                    <FontAwesomeIcon className='facebook' icon={faFacebook} size="2x" />
-                    <FontAwesomeIcon className='insta' icon={faInstagramSquare} size="2x"  />
-                    <FontAwesomeIcon className='twitter' icon={faTwitter}  size="2x" />
-                    <FontAwesomeIcon className='whatsapp' icon={faWhatsapp} size="2x"  />
-                    </div>
-                    </div>
-                    <p className='copyright'>Copyright &copy; 2023 by Coralclouds , Inc. All rights reserved.</p>
-                </div>
-                <div>
-                    <p className='footer-heading'>Contact us</p>
-                    <address className='contacts'>
-                    <p className='address'>623 Harrison St., 3rd Floor, San Francisco, CA 94107</p>
-                    <p>
-                    <Link className='footer-link' to="tel:234-201-777">44-789-8988</Link>
-                    <br />
-                    <Link className='footer-link' to="mailto:coming@gmail.com">Send us a mail</Link>
-                    </p>
-                    </address>
-                    
-                </div>
+              
                 <div>
                     <p className='footer-heading'>About TBA</p>
                         <ul className='footer-links'>
@@ -79,6 +56,31 @@ const Footer = () => {
                         <Link className='footer-link' to="/">Terms and Conditions</Link>
                         <Link className='footer-link' to="/">Faqs</Link>
                         </ul>
+                </div> 
+               
+                <div>
+                    <p className='footer-heading'>Contact us</p>
+                    <address className='contacts'>
+                    <p className='address'>623 Harrison St., 3rd Floor, San Francisco, CA 94107</p>
+                    <p>
+                    <Link className='footer-link' to="tel:234-201-777">44-789-8988</Link>
+                    <br />
+                    <Link className='footer-link' to="mailto:coming@gmail.com">Send us a mail</Link>
+                    </p>
+                    </address>
+                    
+                </div> 
+                 <div  className='footer-logo-col'>
+                    <div className=''>
+                    <p className='connect'>Connect With us</p>
+                    <div className='footer-icons'>
+                    <FontAwesomeIcon className='facebook' icon={faFacebook} size="2x" />
+                    <FontAwesomeIcon className='insta' icon={faInstagramSquare} size="2x"  />
+                    <FontAwesomeIcon className='twitter' icon={faTwitter}  size="2x" />
+                    <FontAwesomeIcon className='whatsapp' icon={faWhatsapp} size="2x"  />
+                    </div>
+                    </div>
+                    <p className='copyright'>Copyright &copy; 2023 by Coralclouds , Inc. All rights reserved.</p>
                 </div>
             </div>
         </div>

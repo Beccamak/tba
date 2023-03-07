@@ -1,7 +1,7 @@
 import { createAction } from "../../utils/reducer.utils";
 import { CART_ACTION_TYPES } from "./cart.types";
 
-
+let item_quantity = 0;
  const addCartItem = (cartItems, productToAdd) => {
     //check if the itm is there
     const existingCartItem = cartItems.find((cartItem) => cartItem.id === productToAdd.id);   
@@ -10,11 +10,15 @@ import { CART_ACTION_TYPES } from "./cart.types";
     if(existingCartItem){
         return cartItems.map((cartItem) => (
             cartItem.id === productToAdd.id ? {...cartItem, quantity: cartItem.quantity + 1} : cartItem
+           
         ))
-    }
-   // if it is not
+
+    }else{
+        // if it is not
 
         return [...cartItems, {...productToAdd, quantity: 1}]
+    }
+   
   
 }
 
@@ -45,6 +49,10 @@ export const removeItemFromCart = (cartItems, productToRemove) => {
 }
 export const clearItemFromCart = (cartItems, productToClear) => {
     const newCartItems = clearCartItem(cartItems, productToClear);
+    return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, newCartItems);
+}
+export const clearCart = ()=>{
+    const newCartItems = [];
     return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, newCartItems);
 }
 

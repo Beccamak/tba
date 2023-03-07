@@ -20,7 +20,7 @@ const ProductPage = ({ product }) => {
   const cartItems = useSelector(selectCartItems);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
 
   const [descriptionActive, setDescriptionActive] = useState(true);
   const [returnActive, setReturnActive] = useState(false);
@@ -70,9 +70,11 @@ const ProductPage = ({ product }) => {
     navigate("/checkout");
   };
   const onPlusClickHandler = () => {
+
     setQuantity(quantity + 1);
   };
   const onMinusClickHandler = () => {
+    dispatch(removeItemFromCart(cartItems, product));
     if (quantity === 1) return;
     setQuantity(quantity - 1);
   };

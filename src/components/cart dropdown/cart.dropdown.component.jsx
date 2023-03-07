@@ -6,22 +6,26 @@ import {
   selectCartItems,
   selectCartTotal,
 } from "../../store/cart reducer/cart.selector";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CartItem from "../cart-item/cart.item.component";
 import FlashSales from "../flash sales/flash.sales.component";
 import { useLocation} from "react-router-dom";
-import { ReactComponent as Delete } from "../../assets/svgs/delete.svg"
+import { ReactComponent as Delete } from "../../assets/svgs/delete.svg";
+import { clearCart } from "../../store/cart reducer/cart.action";
 
 
 const CartDropdown = () => {
   const navigate = useNavigate();
   const cartItems = useSelector(selectCartItems);
-  console.log(cartItems);
+  const dispatch = useDispatch();
   const cartCount = useSelector(selectCartCount);
   const cartTotal = useSelector(selectCartTotal);
   const checkOutHandler = () => navigate("/checkout");
   const onShopNowHandler = () => navigate("/");
   const location = useLocation();
+  const onClearCartHandler = () =>{
+    dispatch(clearCart());
+  }
  
 console.log(location, "loction");
 
@@ -53,7 +57,7 @@ console.log(location, "loction");
 
               <p className="clear">
               <Delete />
-              <span>Clear Cart</span>
+              <span onClick={onClearCartHandler}>Clear Cart</span>
               </p>
             </div>
             <div className="cart-summary">
