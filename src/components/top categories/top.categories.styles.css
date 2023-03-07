@@ -75,4 +75,11 @@
     .top-categories-container{
       grid-template-columns: repeat(2, 1fr);
     }
+    .cat-pic-con{
+        height: 18rem;
+    }
+    .cat-pic{
+        width: 18rem;
+        height: 17rem;
+    }
   }

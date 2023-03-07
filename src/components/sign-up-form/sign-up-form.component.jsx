@@ -173,9 +173,7 @@ const SignUpForm = () =>{
      
      </div>
     
-     <div className='forgot-pass-con' >
-    <Link className='forgot-password' to='/'>Forgot Password?</Link>
-    </div>
+  
     <div className='btn-group'>
     {(signUpState && actionIsLoading)? <Spinner />: <Button buttonType="filled" children="Sign up" onClickHandler={onSignUpClickHandler} />}
     {/* 

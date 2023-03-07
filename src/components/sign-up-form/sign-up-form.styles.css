@@ -8,3 +8,10 @@
     font-size: 2rem;
 
 }
+@media (max-width: 34em) {
+    .sign-up-container{
+      max-width: 54rem;
+    }
+    
+   
+  }

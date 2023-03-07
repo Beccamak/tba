@@ -33,7 +33,7 @@ console.log(location, "loction");
   return (
     <div className="cart-dropdown container">
       {cartCount ? (
-        <div className="container">
+        <div className="">
           <p className="shopping-cart">Shopping cart</p>
           <div className=" shopping-cart-con">
             <div className="cart-table">
