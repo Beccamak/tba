@@ -18,3 +18,8 @@
 .pd-reduce{
     padding: 1.6rem;
 }
+@media (max-width: 34em) {
+    .products-header-container{
+      padding: 1.4rem 0;
+    }
+  }

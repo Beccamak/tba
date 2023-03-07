@@ -132,3 +132,20 @@
     color: #ffffff;
   }
 }
+@media (max-width: 34em) {
+  .cart-item{
+    gap: 1.2rem;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  .ci-left{
+    flex-direction: column;
+    
+  }
+  .cart-item, .cart-quantity, .itm-qtn,  .ci-left .itm-flx .itm-nm{
+    font-size: 1.2rem;
+  }
+  .itm-qtn, .ch-itm-qtn{
+    padding: 0.1rem 1rem;
+  }
+ 
+}

@@ -167,3 +167,10 @@ form {
 .hide-label-input {
   visibility: hidden;
 }
+@media (max-width: 34em) {
+  .sign-in-container{
+    max-width: 54rem;
+  }
+  
+ 
+}

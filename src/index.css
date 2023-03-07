@@ -110,3 +110,9 @@ a {
   font-size: 1.2rem;
   line-height: 1.6rem;
 }
+
+@media (max-width: 34em) {
+  .see-more{
+    font-size: 1.4rem;
+  }
+}

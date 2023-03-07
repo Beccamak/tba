@@ -1,6 +1,6 @@
 .cart-dropdown {
-  max-width: 130rem;
-  margin: 0 auto;
+  // max-width: 130rem;
+  // margin: 0 auto;
 }
 .clear {
   padding: 2.4rem;
@@ -84,7 +84,7 @@
 .cart-table {
   background-color: #ffffff;
   // background-color: red;
-  width: 60%;
+  //width: 60%;
   height: min-content;
 }
 
@@ -98,4 +98,17 @@
   padding: 2.4rem;
   font-size: 1.6rem;
   font-weight: 600;
+}
+
+@media (max-width: 34em) {
+  .shopping-cart-con{
+    flex-direction: column;
+
+  }
+  .cart-table{
+    width: 100%;
+  }
+  .cart-summary{
+    //width: 100%;
+  }
 }
