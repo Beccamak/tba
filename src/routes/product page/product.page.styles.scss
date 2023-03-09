@@ -213,3 +213,14 @@
 .review{
   margin-left: 2.4rem;
 }
+
+@media (max-width: 34em) {
+  .product-page-container{
+    flex-direction: column;
+    gap: 0;
+
+  }
+ 
+ 
+}
+
