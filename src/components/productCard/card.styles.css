@@ -108,6 +108,7 @@
    }
    .deals-products{
     gap: 4px;
+    overflow-x: scroll;
    }
    .product-details{
     padding: 1.2rem 0.8rem;
@@ -116,9 +117,7 @@
     padding: 0 0.8rem;
    }
    .btn-slie{
-    width:1.2rem;
-    height: 1.2rem;
-    padding: 0.5rem;
+    display: none;
 
    }
    .percent-decrease{

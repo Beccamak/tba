@@ -23,7 +23,7 @@
 }
 
 .deals-products::-webkit-scrollbar {
-  display: none;
+ 
 }
 
 .btn-slie {
@@ -59,4 +59,13 @@
 }
 .t-right:hover {
   background-color: #b71e79;
+}
+@media(max-width:34em){
+  .deals-products {
+    gap: 4px;
+    overflow-x: scroll;
+  }
+  .deals-products::-webkit-scrollbar {
+    display: block;
+  }
 }
