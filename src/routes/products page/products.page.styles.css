@@ -4,3 +4,13 @@
     gap: 4rem; 
     padding: 2.4rem;
     }
+    
+    @media(max-width: 39em){
+
+        .sd-cat{
+            display: none;
+        }
+        .products-page{
+            width: 100%;
+        }
+    }

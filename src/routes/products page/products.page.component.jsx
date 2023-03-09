@@ -8,12 +8,14 @@ const ProductsPage = ({productsDetails}) => {
         <div>
 
         <div className='products-page'>
-        <Sidebar products={products}/>
+        <div className='sd-cat'>
+        <Sidebar  products={products}/>
+        </div>
+
             <ProductsCard children={children} headerType={headerType} route={route} products={products}/>
         </div>
         </div>
     )
 }
-
 
 export default ProductsPage;
