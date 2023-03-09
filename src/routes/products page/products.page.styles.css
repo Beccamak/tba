@@ -11,6 +11,6 @@
             display: none;
         }
         .products-page{
-            width: 100%;
+            display: block;
         }
     }

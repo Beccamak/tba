@@ -11,3 +11,9 @@
     padding: 1.6rem;
 }
 
+
+@media(max-width:39em){
+    .sales-products{
+        grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
+}
