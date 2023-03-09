@@ -98,3 +98,30 @@
   height: 100%;
   border-radius: 1rem;
 }
+@media (max-width: 34em) {
+  .product-card-container{
+   flex-basis: 9rem;
+  }
+   .img-container img{
+    height: 12rem;
+    object-fit: cover;
+   }
+   .deals-products{
+    gap: 4px;
+   }
+   .product-details{
+    padding: 1.2rem 0.8rem;
+   }
+   .inventory-details{
+    padding: 0 0.8rem;
+   }
+   .btn-slie{
+    width:1.2rem;
+    height: 1.2rem;
+    padding: 0.5rem;
+
+   }
+   .percent-decrease{
+    padding: 0.5rem 0.55rem;
+   }
+}

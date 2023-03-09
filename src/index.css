@@ -49,15 +49,15 @@ a {
     margin: 0 auto;
   }
 }
-@media (max-width: 59em) {
-  .container {
-    max-width: 90rem;
-  }
-}
+
 @media (max-width: 34em) {
   .container {
-    max-width: 54rem;
+    max-width: 54.4rem;
+    padding: 0 1.2rem;
+    margin: 0 auto;
+   
   }
+
 }
 .secondary-heading {
   font-size: 2.4rem;
@@ -115,4 +115,8 @@ a {
   .see-more{
     font-size: 1.4rem;
   }
+  .footer-up{
+    display: none;
+  }
 }
+
