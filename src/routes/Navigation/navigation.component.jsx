@@ -19,7 +19,7 @@ import { setIsAccountOpen } from '../../store/userReducer/user.action';
 import { setIsDropdownOpen } from '../../store/products reducer/products.action';
 import Dropdown from '../../components/dropdown/dropdown.component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBaby, faBars, faHamburger } from '@fortawesome/free-solid-svg-icons';
+import { faBaby, faBars, faHamburger,  faUser } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -51,6 +51,14 @@ const Navigation = () => {
    }
    const toggleIsDropdownOpen = () => {
        dispatch(setIsDropdownOpen(!isDropdownOpen));
+   }
+   const onAccountClickHandler= () =>{
+    return(
+        <div className='nav-account'>
+        <Link to='/sign-up'>sign up</Link>
+        <Link to='/sign-in'>login</Link>
+        </div>
+    )
    }
    useEffect(()=> {
     if( isAccountOpen || isDropdownOpen){
@@ -150,6 +158,16 @@ const Navigation = () => {
             </Link> 
             }
              
+            </div>
+            <div  className='nav-acc'>
+            <svg xmlns="http://www.w3.org/2000/svg" className="nav-icon " fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <FontAwesomeIcon icon={faUser} onClick={onAccountClickHandler} />
+                <div className='nav-account'>
+                    <Link to='/sign-up'>sign up</Link>
+                    <Link to='/sign-in'>login</Link>
+        </div>
             </div>
         </div>
        <div>
