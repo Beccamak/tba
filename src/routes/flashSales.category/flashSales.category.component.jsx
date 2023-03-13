@@ -57,7 +57,7 @@ const FlashsalesCategory = () => {
     return(
         <div className='flash-sales-category'>
         <ProductsPage productsDetails={{
-            children: "Flash Sales",
+            children: "Promo Sale",
             headerType: "flashSales",
             route: "flash", 
             products: flashSalesProducts

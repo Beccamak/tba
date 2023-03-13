@@ -28,13 +28,10 @@ const Navigation = () => {
     const navigate = useNavigate();
     const currentUser = useSelector(selectCurrentUser);
    const cartCount = useSelector(selectCartCount);
-   const isCartOpen = useSelector(selectIsCartOpen);
    const isAccountOpen = useSelector(selectIsAccountOpen);
    const isDropdownOpen = useSelector(selectIsDropdownOpen);
    const searchString = useSelector(selectSearchString);
-   const hasTransitionedIn = useMountAndUnmountTransition(isCartOpen, 1000);
-   const accountHasTransitionedIn = useMountAndUnmountTransition(isAccountOpen, 1000);
-   const dropDownHasTransitionedIn = useMountAndUnmountTransition(isDropdownOpen, 1000);
+
    const [accountP, setAccountP] = useState(false);
     const [sticky, setSticky] = useState(false);
     const location = useLocation();
@@ -156,16 +153,20 @@ const Navigation = () => {
              
             </div>
             <div  className='nav-acc'>
+            <div className='cart-rel'>
+
             <Link to='/cart'>
-           
             <svg xmlns="http://www.w3.org/2000/svg" className="nav-icon " fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
+               
                  </Link>
+                 <span className='item-count'>{cartCount}</span>
+                 </div>
                 <FontAwesomeIcon className='nav-icon' icon={faUser} onClick={onAccountClickHandler} />
                 <div className={`nav-account ${accountP? 'account-visible':'account-hide'}`}>
-                    <Link to='/sign-up' onClick={onAccountClickHandler}>sign up</Link>
-                    <Link to='/sign-in' onClick={onAccountClickHandler}>login</Link>
+                    <Link to='/sign-up' className='acc-up' onClick={onAccountClickHandler}>Sign Up</Link>
+                    <Link to='/sign-in' style={{textAlign:'center'}} onClick={onAccountClickHandler}>Login</Link>
         </div>
             </div>
         </div>

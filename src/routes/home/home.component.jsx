@@ -15,7 +15,8 @@ const Home = () => {
   console.log("location", location);
     return(
       <div>
-      <Searchbar  />
+      <Searchbar  /> 
+  
       <Carousel />
       <MidSection />
       <TrendingSale />
@@ -29,7 +30,7 @@ const Home = () => {
     
     
     export default Home;
-    // <MainDisplay />
-        
+  
+             <MainDisplay />
         // <motion.div initial={{width: 0}} animate={{width: "100%"}} transition={{duration: 0.9}} exit={{width: window.innerWidth}}>    
         // </motion.div>

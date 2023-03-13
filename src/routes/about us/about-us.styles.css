@@ -3,32 +3,29 @@
    color: #FFFFFF; 
   text-align: center;
   padding: 4.8rem 0;
-  font-size: 4.8rem;
+  font-size: 2.4rem;
   margin-bottom: 4.8rem;
-  font-family: poppins, sans-serif;
   font-weight: 600;
 }
 
 .tba {
   font-weight: 500;
   font-style: normal;
-  font-size: 24px;
+  font-size: 1.6rem;
   line-height: 3.2rem;
   color: #000000;
   font-family: nunito, sans-serif;
-  margin-bottom: 6.4rem;
+  margin-bottom: 2.4rem;
 }
 .tba-bold {
   font-weight: 700;
 }
 .abt-heading {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 3.6rem;
   color: #000000;
-  margin-bottom: 2.4rem;
 }
 
 .origin-txt {

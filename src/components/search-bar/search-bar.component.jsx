@@ -1,21 +1,28 @@
 import './search-bar.styles.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
+import { setSearchString } from '../../store/products reducer/products.action';
+import { useDispatch } from 'react-redux';
 
-const SEARCH_BAR_TYPE = {
-    home: "home-sear"
-}
 
 const Searchbar = () => {
     const [searchQuery, setSearchQuery] = useState("");
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const handleSearchInputChange = (event) => {
-      setSearchQuery(event.target.value);
+    //   setSearchQuery(event.target.value);
+       const searchStringValue = event.target.value.toLocaleLowerCase();
+        dispatch(setSearchString(searchStringValue));
+       navigate("/all-products");
+       
+     
     };
   
     const handleSearch = (event) => {
       event.preventDefault();
       console.log(`Searching for ${searchQuery}`);
-      // Call your search function here with the searchQuery as parameter
+     
     };
   
     return (
