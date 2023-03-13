@@ -113,9 +113,14 @@ a {
 
 @media (max-width: 34em) {
   .see-more{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
- 
- 
+  .secondary-heading{
+    font-size: 2rem;
+  }
+  .normal-text{
+    font-size: 1.4rem;
+    height: 1.8rem;
+  }
 }
 

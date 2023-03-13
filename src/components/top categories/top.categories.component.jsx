@@ -36,7 +36,7 @@ const TopCategories = () => {
             <img className='cat-pic'  src={Clothes} alt='Fashion Category' />
             </div>
             </div>
-            <p className={`cat-text`} style={{transition: "all 1s linear"}} >Men's Clothing</p>
+            <p className={`cat-text`} style={{transition: "all 1s linear"}} >Men</p>
             </div>
             <div className='top-category' >
             <div className='cat-pic-con' onClick={() => {onTopCategoryHandler("Lip gloss")}}>
@@ -44,7 +44,7 @@ const TopCategories = () => {
             <img className='cat-pic'  src={Nails} alt='Phones & Tablets Category' />
             </div>
             </div>
-            <p className={`cat-text`} style={{transition: "all 1s linear"}} >Artificial Nails</p>
+            <p className={`cat-text`} style={{transition: "all 1s linear"}} >Nail</p>
             
             </div>
             <div className='top-category' >
@@ -53,7 +53,7 @@ const TopCategories = () => {
             <img className='cat-pic'  src={Wrist} alt='Wrist watches' />
             </div>
             </div>
-            <p className={`cat-text`} style={{transition: "all 1s linear"}} >Wrist Watches</p>     
+            <p className={`cat-text`} style={{transition: "all 1s linear"}} >Watch</p>     
             </div>
             <div className='top-category' >
               <div className='cat-pic-con' onClick={() => {onTopCategoryHandler("Lip gloss")}}>
@@ -61,7 +61,7 @@ const TopCategories = () => {
             <img className='cat-pic'  src={Shampoo}  alt='Shoes' />
             </div>
             </div>
-            <p className={`cat-text`} style={{transition: "all 1s linear"}} >Heels</p>     
+            <p className={`cat-text`} style={{transition: "all 1s linear"}} >Shoe</p>     
             </div>
             <div className='top-category' >
               <div className='cat-pic-con' onClick={() => {onTopCategoryHandler("Lip gloss")}}>
@@ -77,7 +77,7 @@ const TopCategories = () => {
             <img className='cat-pic'  src={Facial}  alt='Shoes' />
             </div>
             </div>
-            <p className={`cat-text`} style={{transition: "all 1s linear"}} >Heels</p>     
+            <p className={`cat-text`} style={{transition: "all 1s linear"}} >Cream</p>     
             </div>
             <div className='top-category' >
               <div className='cat-pic-con' onClick={() => {onTopCategoryHandler("Lip gloss")}}>
@@ -85,7 +85,7 @@ const TopCategories = () => {
             <img className='cat-pic'  src={Gown}  alt='Shoes' />
             </div>
             </div>
-            <p className={`cat-text`} style={{transition: "all 1s linear"}} >Heels</p>     
+            <p className={`cat-text`} style={{transition: "all 1s linear"}} >Soap</p>     
             </div>
         </div>
         </div>

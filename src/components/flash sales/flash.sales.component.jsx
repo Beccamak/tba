@@ -15,7 +15,7 @@ const FlashSales = () => {
         <div className= {`products-header-container`}>
         <div className='container ph-sub'>
         <div className='sp-timer'>
-        <span>Today's Promo Sale</span>
+        <span>Promo Sale</span>
         <Timer />
         </div>
         <div className='see-more'>

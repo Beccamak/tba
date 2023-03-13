@@ -28,12 +28,12 @@ const MidSection = () => {
         <p className='item'>Make payment</p>
         </div>
         <Line  className='down'  />
-        <div className='mid-item'>
+        <div className='mid-item get'>
         <Truck  className='mid-icon'  />
         <p className='item'>Get your item delivered</p>
         </div>
         <Line  className='down'  />
-        <div className='mid-item'>
+        <div className='mid-item be'>
         <Happy className='mid-icon'  />
         <p className='item'>Be a happy customer</p>
         </div>

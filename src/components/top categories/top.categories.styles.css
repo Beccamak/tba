@@ -104,7 +104,9 @@
 
     }
     .cat-pic-con{
-       height: 8rem;
+       height: 6rem;
+       column-gap: 0.8rem;
+       row-gap: 1rem;
 
     }
     .cat-text{

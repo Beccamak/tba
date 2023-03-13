@@ -2,9 +2,7 @@
     display: flex;
     margin: 0 10rem;
     gap: 3.4rem;
-    .checkout-container p>{
-      color: red;
-    }
+   
     .checkout-left >*{
         border-bottom: 1px solid #000000;
     }
@@ -232,4 +230,21 @@
     margin-bottom: 4.8rem;
     margin-top: 1.2rem;
    }
+  }
+
+  @media(max-width:39em){
+    .checkout-container{
+      flex-direction: column;
+      margin: 1.2rrem;
+
+    }
+    .checkout-left{
+      width: 100%;
+    }
+    .ch-btn{
+      width: 80%;
+    }
+    .checkout-summary{
+      width: 100%;
+    }
   }

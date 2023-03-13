@@ -12,7 +12,7 @@ const ProductsHeader = ({headerType, children, route, onClickHandler, previewRou
         <div className='container ph-sub'>
         <span className='secondary-heading'>{children}</span>
         {headerType === "normal" && ""}
-        {headerType === "linkHeader"? <Link className='secondary-heading see-more' to={`${route}`} >See More
+        {headerType === "linkHeader"? <Link className='see-more' to={`${route}`} >See More
         
         <FontAwesomeIcon size='1x' icon={faAngleRight} />
         </Link>: ""}

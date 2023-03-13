@@ -40,20 +40,34 @@
 
 @media (max-width: 34em) {
   .mid-section{
-    
+    height: 28rem;
   }
   .mid-items{
-        gap: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2.4rem;
+    column-gap: 0.4rem;
+
+  }
+  .mid-item{
+    gap: 2rem;
   }
   .item{
     font-size: 1.4rem;
     text-align: center;
   }
   .mid-icon{
-    height: 2rem;
-    width: 2rem;
+    height: 2.4rem;
+    width: 2.4rem;
   }
   .down{
     display: none;
+  }
+  .get{
+    grid-column: 1 / span 1;
+    /* grid-column-end: 3; */
+  }
+  .be{
+    grid-column: 2 / span 1;
   }
 }
